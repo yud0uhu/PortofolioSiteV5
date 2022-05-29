@@ -29,7 +29,12 @@
     ]
   },
   "dependencies": {
+    "@chakra-ui/gatsby-plugin": "3.0.0",
+    "@chakra-ui/react": "2.1.2",
+    "@emotion/react": "11.9.0",
+    "@emotion/styled": "11.8.1",
     "dotenv": "16.0.1",
+    "framer-motion": "6.3.4",
     "gatsby": "4.15.0",
     "gatsby-source-microcms": "2.0.0",
     "react": "18.1.0",
