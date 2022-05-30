@@ -38,10 +38,10 @@
     "dotenv": "16.0.1",
     "framer-motion": "6.3.4",
     "gatsby": "4.15.0",
-    "gatsby-source-figma": "1.1.2",
     "gatsby-source-microcms": "2.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "storybook-addon-designs": "6.2.1",
     "tsconfig-paths-webpack-plugin": "3.5.2"
   },
   "devDependencies": {
