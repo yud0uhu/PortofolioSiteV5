@@ -16,8 +16,11 @@ const config: GatsbyConfig = {
       serviceId: 'flyingcat',
       apis: [
         {
-          endpoint: 'works',
-          },
+          endpoint: 'works'
+        },
+        {
+          endpoint: "dailyui"
+        },
         ],
       },
     },
