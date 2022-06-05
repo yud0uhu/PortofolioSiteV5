@@ -1,31 +1,38 @@
-import { Divider, Text, Flex } from '@chakra-ui/react';
+import { Divider, Spacer, Flex, Text, Stack } from '@chakra-ui/react';
+import Card from '../../atoms/Card/index';
 import React from 'react';
 
+import Button from '../../atoms/Button/index';
 const Products = () => {
   return (
     <>
-      <span>
+      <Stack direction={'row'}>
         <Divider
-          mt={12}
-          w={180}
+          marginTop={12}
+          w={{ base: 45, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
           opacity="1"
         />
-      </span>
-      <Divider orientation="vertical" />
-      <span>
         <Text
           fontWeight="bold"
           fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
-          height="80px"
           justifyContent="left"
           position={'absolute'}
-          px={6}
+          px={48}
         >
           products
         </Text>
-      </span>
+      </Stack>
+      <Stack marginTop={12}>
+        <Flex>
+          <Card />
+        </Flex>
+        <Spacer />
+        <Flex justifyContent="center">
+          <Button />
+        </Flex>
+      </Stack>
     </>
   );
 };

@@ -2,6 +2,7 @@ import { Stack, Flex, Box } from '@chakra-ui/react';
 import Header from '../../organisms/Header/index';
 import About from '../../organisms/About/index';
 import Products from '../../organisms/Products/index';
+import Slides from '../../organisms/Slides/index';
 import React from 'react';
 
 export default function HomePage() {
@@ -24,9 +25,12 @@ export default function HomePage() {
       <Flex w={'full'} direction={'column'}>
         <About />
       </Flex>
-      {/* <Flex>
+      <Flex w={'full'} direction={'column'}>
         <Products />
-      </Flex> */}
+      </Flex>
+      <Flex w={'full'} direction={'column'}>
+        <Slides />
+      </Flex>
     </Stack>
   );
 }
