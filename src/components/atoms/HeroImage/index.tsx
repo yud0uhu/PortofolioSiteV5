@@ -1,7 +1,7 @@
 import { Stack, Skeleton } from '@chakra-ui/react';
 import React from 'react';
 
-export default function HeaderBox() {
+export default function HeroImage() {
   return (
     <Stack
       textAlign={'center'}
@@ -9,6 +9,8 @@ export default function HeaderBox() {
       spacing={{ base: 8, md: 10 }}
       py={{ base: 20, md: 28 }}
     >
+      <Stack></Stack>
+      {/* <li>{data.edges}</li> */}
       <Skeleton
         justifyContent="center"
         alignItems="center"

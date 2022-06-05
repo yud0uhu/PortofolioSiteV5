@@ -1,15 +1,12 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 
-type ProfileIconProps = {
+type IconProps = {
   iconImageUrl: string;
   marginLeft: number;
 };
 
-export const ProfileIcon: React.FC<ProfileIconProps> = ({
-  iconImageUrl,
-  marginLeft,
-}) => {
+export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
   return (
     <Box marginLeft={marginLeft}>
       <img src={iconImageUrl} alt={iconImageUrl} />
