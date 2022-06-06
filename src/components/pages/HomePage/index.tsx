@@ -3,8 +3,9 @@ import Header from '../../organisms/Header/index';
 import About from '../../organisms/About/index';
 import Products from '../../organisms/Products/index';
 import Slides from '../../organisms/Slides/index';
+import DailyUi from '../../organisms/Dailyui/index';
 import React from 'react';
-
+import ReturntoButton from '../../atoms/ReturnTopButton/index';
 export default function HomePage() {
   return (
     <Stack
@@ -29,8 +30,12 @@ export default function HomePage() {
         <Products />
       </Flex>
       <Flex w={'full'} direction={'column'}>
+        <DailyUi />
+      </Flex>
+      <Flex w={'full'} direction={'column'}>
         <Slides />
       </Flex>
+      <ReturntoButton />
     </Stack>
   );
 }

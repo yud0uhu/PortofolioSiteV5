@@ -63,7 +63,7 @@ const Products = () => {
         </SimpleGrid>
         <Spacer />
         <Flex justifyContent="center">
-          <Button />
+          <Button text={'View More ＞'} />
         </Flex>
       </Stack>
     </>
