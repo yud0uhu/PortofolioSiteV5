@@ -39,6 +39,9 @@ export default function HomePage() {
       <Flex w={'full'} direction={'column'}>
         <Job />
       </Flex>
+      <Flex w={'full'} direction={'column'} textAlign={'right'}>
+        ©0yu inc.
+      </Flex>
       <ReturntoButton />
     </Stack>
   );
