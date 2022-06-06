@@ -6,10 +6,10 @@ import {
   Text,
   Stack,
 } from '@chakra-ui/react';
-import Card from '../../atoms/Card/index';
+import Card from '@/components/atoms/Card/index';
 import React from 'react';
 
-import Button from '../../atoms/Button/index';
+import Button from '@/components/atoms/Button/index';
 import { useMicrocmsWokrsMetadata } from '@/hooks/query/allMicrocmsWorks';
 
 type allmicrocmsWorksProps = {

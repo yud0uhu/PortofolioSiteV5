@@ -9,7 +9,7 @@ import {
 import UiCard from '@/components/atoms/UiCard/index';
 import React from 'react';
 
-import Button from '../../atoms/Button/index';
+import Button from '@/components/atoms/Button/index';
 import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/AllMicrocmsDailiui';
 
 type allmicrocmsDailyuiProps = {

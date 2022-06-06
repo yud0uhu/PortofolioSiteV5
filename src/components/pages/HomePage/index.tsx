@@ -1,11 +1,11 @@
 import { Stack, Flex, Box } from '@chakra-ui/react';
-import Header from '../../organisms/Header/index';
-import About from '../../organisms/About/index';
-import Products from '../../organisms/Products/index';
-import Slides from '../../organisms/Slides/index';
-import DailyUi from '../../organisms/Dailyui/index';
+import Header from '@/components/organisms/Header/index';
+import About from '@/components/organisms/About/index';
+import Products from '@/components/organisms/Products/index';
+import Slides from '@/components/organisms/Slides/index';
+import DailyUi from '@/components/organisms/Dailyui/index';
 import React from 'react';
-import ReturntoButton from '../../atoms/ReturnTopButton/index';
+import ReturntoButton from '@/components/atoms/ReturnTopButton/index';
 export default function HomePage() {
   return (
     <Stack

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Button from '../Button';
+import Button from '@/components/atoms/Button/index';
 import React from 'react';
 
 const ReturnTopButton = () => {

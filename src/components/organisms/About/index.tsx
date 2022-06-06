@@ -1,5 +1,5 @@
 import { Divider, Box, Flex, Text, Stack } from '@chakra-ui/react';
-import IconLink from '../../molecules/IconLink';
+import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
 const About = () => {

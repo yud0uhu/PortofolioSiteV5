@@ -1,5 +1,13 @@
-import { Divider, Box, Flex, Text, Stack } from '@chakra-ui/react';
-import IconLink from '../../molecules/IconLink';
+import {
+  Divider,
+  Box,
+  Flex,
+  Text,
+  Stack,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react';
+import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
 const Slides = () => {
@@ -24,22 +32,12 @@ const Slides = () => {
         </Text>
       </Stack>
       <Stack direction={'row'} marginTop={12}>
-        <Box textAlign="left" px={12}>
-          <Text fontWeight="bold" fontSize={'2xl'}>
-            0Yu(zero yu)
-          </Text>
-          <Text>
-            試される大地のサブカルオタク
-            <br />
-            Webやゲームエンジンでものづ
-            <br />
-            くりをするのが好きです
-            <br />
-          </Text>
-        </Box>
-        <Flex>
-          <IconLink />
-        </Flex>
+        <UnorderedList>
+          <ListItem>Lorem ipsum dolor sit amet</ListItem>
+          <ListItem>Consectetur adipiscing elit</ListItem>
+          <ListItem>Integer molestie lorem at massa</ListItem>
+          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+        </UnorderedList>
       </Stack>
     </>
   );
