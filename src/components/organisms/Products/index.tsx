@@ -1,4 +1,11 @@
-import { Divider, Spacer, Flex, Text, Stack } from '@chakra-ui/react';
+import {
+  SimpleGrid,
+  Divider,
+  Spacer,
+  Flex,
+  Text,
+  Stack,
+} from '@chakra-ui/react';
 import Card from '../../atoms/Card/index';
 import React from 'react';
 
@@ -13,7 +20,6 @@ type allmicrocmsWorksProps = {
   productUrl: string;
   productComposition: string;
   productData: Date;
-  sortIndex: number;
 };
 const Products = () => {
   const data = useMicrocmsWokrsMetadata();
@@ -39,7 +45,7 @@ const Products = () => {
         </Text>
       </Stack>
       <Stack marginTop={12}>
-        <Flex>
+        <SimpleGrid columns={3}>
           {data.nodes.map((node: allmicrocmsWorksProps, index: number) => (
             <Stack p={4} key={index}>
               <Card
@@ -54,7 +60,7 @@ const Products = () => {
               />
             </Stack>
           ))}
-        </Flex>
+        </SimpleGrid>
         <Spacer />
         <Flex justifyContent="center">
           <Button />

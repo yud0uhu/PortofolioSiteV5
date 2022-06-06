@@ -16,7 +16,6 @@ type PallmicrocmsWorksProps = {
   productUrl: string;
   productComposition: string;
   productData: Date;
-  sortIndex: number;
 };
 export default function Card(props: PallmicrocmsWorksProps) {
   const {
@@ -27,7 +26,6 @@ export default function Card(props: PallmicrocmsWorksProps) {
     productUrl,
     productComposition,
     productData,
-    sortIndex,
   } = props;
   return (
     <Center py={6}>
@@ -48,17 +46,11 @@ export default function Card(props: PallmicrocmsWorksProps) {
           mb={6}
           pos={'relative'}
         >
-          <img src={productImage.url} />
-          {/* <Image
-            src={
-              'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            }
-            layout={'fill'}
-          /> */}
+          <img src={productImage.url} alt={productImage} />
         </Box>
         <Stack>
           <Text
-            color={'green.500'}
+            color={'#B3D4FC'}
             textTransform={'uppercase'}
             fontWeight={800}
             fontSize={'sm'}
