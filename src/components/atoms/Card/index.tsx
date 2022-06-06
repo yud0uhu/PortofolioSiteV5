@@ -18,7 +18,7 @@ type PallmicrocmsWorksProps = {
   productData: Date;
   sortIndex: number;
 };
-export default function Card(props: Props) {
+export default function Card(props: PallmicrocmsWorksProps) {
   const {
     githubUrl,
     productDatail,
