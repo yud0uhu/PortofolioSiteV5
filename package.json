@@ -37,6 +37,7 @@
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "dotenv": "16.0.1",
+    "esbuild": "0.14.42",
     "framer-motion": "6.3.4",
     "gatsby": "2.23.18",
     "gatsby-source-microcms": "2.0.0",
