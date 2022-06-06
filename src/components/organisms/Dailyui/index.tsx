@@ -10,7 +10,7 @@ import UiCard from '@/components/atoms/UiCard/index';
 import React from 'react';
 
 import Button from '@/components/atoms/Button/index';
-import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/AllMicrocmsDailiui';
+import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/allMicrocmsDailiui';
 
 type allmicrocmsDailyuiProps = {
   figma: string;

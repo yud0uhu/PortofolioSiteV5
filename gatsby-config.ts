@@ -21,6 +21,9 @@ const config: GatsbyConfig = {
         {
           endpoint: "dailyui"
         },
+        {
+          endpoint: 'slide'
+        },
         ],
       },
     },

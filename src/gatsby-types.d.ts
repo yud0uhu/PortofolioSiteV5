@@ -1009,6 +1009,243 @@ declare namespace Queries {
     readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
   };
 
+  type MicrocmsSlide = Node & {
+    readonly children: ReadonlyArray<Node>;
+    readonly createdAt: Maybe<Scalars['Date']>;
+    readonly id: Scalars['ID'];
+    readonly internal: Internal;
+    readonly parent: Maybe<Node>;
+    readonly publishedAt: Maybe<Scalars['Date']>;
+    readonly revisedAt: Maybe<Scalars['Date']>;
+    readonly slideId: Maybe<Scalars['String']>;
+    readonly slideTitle: Maybe<Scalars['String']>;
+    readonly slideUrl: Maybe<Scalars['String']>;
+    readonly sortIndex: Maybe<Scalars['Int']>;
+    readonly updatedAt: Maybe<Scalars['Date']>;
+  };
+
+  type MicrocmsSlide_createdAtArgs = {
+    difference: InputMaybe<Scalars['String']>;
+    formatString: InputMaybe<Scalars['String']>;
+    fromNow: InputMaybe<Scalars['Boolean']>;
+    locale: InputMaybe<Scalars['String']>;
+  };
+
+  type MicrocmsSlide_publishedAtArgs = {
+    difference: InputMaybe<Scalars['String']>;
+    formatString: InputMaybe<Scalars['String']>;
+    fromNow: InputMaybe<Scalars['Boolean']>;
+    locale: InputMaybe<Scalars['String']>;
+  };
+
+  type MicrocmsSlide_revisedAtArgs = {
+    difference: InputMaybe<Scalars['String']>;
+    formatString: InputMaybe<Scalars['String']>;
+    fromNow: InputMaybe<Scalars['Boolean']>;
+    locale: InputMaybe<Scalars['String']>;
+  };
+
+  type MicrocmsSlide_updatedAtArgs = {
+    difference: InputMaybe<Scalars['String']>;
+    formatString: InputMaybe<Scalars['String']>;
+    fromNow: InputMaybe<Scalars['Boolean']>;
+    locale: InputMaybe<Scalars['String']>;
+  };
+
+  type MicrocmsSlideConnection = {
+    readonly distinct: ReadonlyArray<Scalars['String']>;
+    readonly edges: ReadonlyArray<MicrocmsSlideEdge>;
+    readonly group: ReadonlyArray<MicrocmsSlideGroupConnection>;
+    readonly max: Maybe<Scalars['Float']>;
+    readonly min: Maybe<Scalars['Float']>;
+    readonly nodes: ReadonlyArray<MicrocmsSlide>;
+    readonly pageInfo: PageInfo;
+    readonly sum: Maybe<Scalars['Float']>;
+    readonly totalCount: Scalars['Int'];
+  };
+
+  type MicrocmsSlideConnection_distinctArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideConnection_groupArgs = {
+    field: MicrocmsSlideFieldsEnum;
+    limit: InputMaybe<Scalars['Int']>;
+    skip: InputMaybe<Scalars['Int']>;
+  };
+
+  type MicrocmsSlideConnection_maxArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideConnection_minArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideConnection_sumArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideEdge = {
+    readonly next: Maybe<MicrocmsSlide>;
+    readonly node: MicrocmsSlide;
+    readonly previous: Maybe<MicrocmsSlide>;
+  };
+
+  type MicrocmsSlideFieldsEnum =
+    | 'children'
+    | 'children.children'
+    | 'children.children.children'
+    | 'children.children.children.children'
+    | 'children.children.children.id'
+    | 'children.children.id'
+    | 'children.children.internal.content'
+    | 'children.children.internal.contentDigest'
+    | 'children.children.internal.description'
+    | 'children.children.internal.fieldOwners'
+    | 'children.children.internal.ignoreType'
+    | 'children.children.internal.mediaType'
+    | 'children.children.internal.owner'
+    | 'children.children.internal.type'
+    | 'children.children.parent.children'
+    | 'children.children.parent.id'
+    | 'children.id'
+    | 'children.internal.content'
+    | 'children.internal.contentDigest'
+    | 'children.internal.description'
+    | 'children.internal.fieldOwners'
+    | 'children.internal.ignoreType'
+    | 'children.internal.mediaType'
+    | 'children.internal.owner'
+    | 'children.internal.type'
+    | 'children.parent.children'
+    | 'children.parent.children.children'
+    | 'children.parent.children.id'
+    | 'children.parent.id'
+    | 'children.parent.internal.content'
+    | 'children.parent.internal.contentDigest'
+    | 'children.parent.internal.description'
+    | 'children.parent.internal.fieldOwners'
+    | 'children.parent.internal.ignoreType'
+    | 'children.parent.internal.mediaType'
+    | 'children.parent.internal.owner'
+    | 'children.parent.internal.type'
+    | 'children.parent.parent.children'
+    | 'children.parent.parent.id'
+    | 'createdAt'
+    | 'id'
+    | 'internal.content'
+    | 'internal.contentDigest'
+    | 'internal.description'
+    | 'internal.fieldOwners'
+    | 'internal.ignoreType'
+    | 'internal.mediaType'
+    | 'internal.owner'
+    | 'internal.type'
+    | 'parent.children'
+    | 'parent.children.children'
+    | 'parent.children.children.children'
+    | 'parent.children.children.id'
+    | 'parent.children.id'
+    | 'parent.children.internal.content'
+    | 'parent.children.internal.contentDigest'
+    | 'parent.children.internal.description'
+    | 'parent.children.internal.fieldOwners'
+    | 'parent.children.internal.ignoreType'
+    | 'parent.children.internal.mediaType'
+    | 'parent.children.internal.owner'
+    | 'parent.children.internal.type'
+    | 'parent.children.parent.children'
+    | 'parent.children.parent.id'
+    | 'parent.id'
+    | 'parent.internal.content'
+    | 'parent.internal.contentDigest'
+    | 'parent.internal.description'
+    | 'parent.internal.fieldOwners'
+    | 'parent.internal.ignoreType'
+    | 'parent.internal.mediaType'
+    | 'parent.internal.owner'
+    | 'parent.internal.type'
+    | 'parent.parent.children'
+    | 'parent.parent.children.children'
+    | 'parent.parent.children.id'
+    | 'parent.parent.id'
+    | 'parent.parent.internal.content'
+    | 'parent.parent.internal.contentDigest'
+    | 'parent.parent.internal.description'
+    | 'parent.parent.internal.fieldOwners'
+    | 'parent.parent.internal.ignoreType'
+    | 'parent.parent.internal.mediaType'
+    | 'parent.parent.internal.owner'
+    | 'parent.parent.internal.type'
+    | 'parent.parent.parent.children'
+    | 'parent.parent.parent.id'
+    | 'publishedAt'
+    | 'revisedAt'
+    | 'slideId'
+    | 'slideTitle'
+    | 'slideUrl'
+    | 'sortIndex'
+    | 'updatedAt';
+
+  type MicrocmsSlideFilterInput = {
+    readonly children: InputMaybe<NodeFilterListInput>;
+    readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+    readonly id: InputMaybe<StringQueryOperatorInput>;
+    readonly internal: InputMaybe<InternalFilterInput>;
+    readonly parent: InputMaybe<NodeFilterInput>;
+    readonly publishedAt: InputMaybe<DateQueryOperatorInput>;
+    readonly revisedAt: InputMaybe<DateQueryOperatorInput>;
+    readonly slideId: InputMaybe<StringQueryOperatorInput>;
+    readonly slideTitle: InputMaybe<StringQueryOperatorInput>;
+    readonly slideUrl: InputMaybe<StringQueryOperatorInput>;
+    readonly sortIndex: InputMaybe<IntQueryOperatorInput>;
+    readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+  };
+
+  type MicrocmsSlideGroupConnection = {
+    readonly distinct: ReadonlyArray<Scalars['String']>;
+    readonly edges: ReadonlyArray<MicrocmsSlideEdge>;
+    readonly field: Scalars['String'];
+    readonly fieldValue: Maybe<Scalars['String']>;
+    readonly group: ReadonlyArray<MicrocmsSlideGroupConnection>;
+    readonly max: Maybe<Scalars['Float']>;
+    readonly min: Maybe<Scalars['Float']>;
+    readonly nodes: ReadonlyArray<MicrocmsSlide>;
+    readonly pageInfo: PageInfo;
+    readonly sum: Maybe<Scalars['Float']>;
+    readonly totalCount: Scalars['Int'];
+  };
+
+  type MicrocmsSlideGroupConnection_distinctArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideGroupConnection_groupArgs = {
+    field: MicrocmsSlideFieldsEnum;
+    limit: InputMaybe<Scalars['Int']>;
+    skip: InputMaybe<Scalars['Int']>;
+  };
+
+  type MicrocmsSlideGroupConnection_maxArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideGroupConnection_minArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideGroupConnection_sumArgs = {
+    field: MicrocmsSlideFieldsEnum;
+  };
+
+  type MicrocmsSlideSortInput = {
+    readonly fields: InputMaybe<
+      ReadonlyArray<InputMaybe<MicrocmsSlideFieldsEnum>>
+    >;
+    readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
+  };
+
   type MicrocmsWorks = Node & {
     readonly children: ReadonlyArray<Node>;
     readonly createdAt: Maybe<Scalars['Date']>;
@@ -1315,6 +1552,7 @@ declare namespace Queries {
     readonly allDirectory: DirectoryConnection;
     readonly allFile: FileConnection;
     readonly allMicrocmsDailyui: MicrocmsDailyuiConnection;
+    readonly allMicrocmsSlide: MicrocmsSlideConnection;
     readonly allMicrocmsWorks: MicrocmsWorksConnection;
     readonly allSite: SiteConnection;
     readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
@@ -1324,6 +1562,7 @@ declare namespace Queries {
     readonly directory: Maybe<Directory>;
     readonly file: Maybe<File>;
     readonly microcmsDailyui: Maybe<MicrocmsDailyui>;
+    readonly microcmsSlide: Maybe<MicrocmsSlide>;
     readonly microcmsWorks: Maybe<MicrocmsWorks>;
     readonly site: Maybe<Site>;
     readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
@@ -1351,6 +1590,13 @@ declare namespace Queries {
     limit: InputMaybe<Scalars['Int']>;
     skip: InputMaybe<Scalars['Int']>;
     sort: InputMaybe<MicrocmsDailyuiSortInput>;
+  };
+
+  type Query_allMicrocmsSlideArgs = {
+    filter: InputMaybe<MicrocmsSlideFilterInput>;
+    limit: InputMaybe<Scalars['Int']>;
+    skip: InputMaybe<Scalars['Int']>;
+    sort: InputMaybe<MicrocmsSlideSortInput>;
   };
 
   type Query_allMicrocmsWorksArgs = {
@@ -1484,6 +1730,21 @@ declare namespace Queries {
     revisedAt: InputMaybe<DateQueryOperatorInput>;
     sortIndex: InputMaybe<IntQueryOperatorInput>;
     title: InputMaybe<StringQueryOperatorInput>;
+    updatedAt: InputMaybe<DateQueryOperatorInput>;
+  };
+
+  type Query_microcmsSlideArgs = {
+    children: InputMaybe<NodeFilterListInput>;
+    createdAt: InputMaybe<DateQueryOperatorInput>;
+    id: InputMaybe<StringQueryOperatorInput>;
+    internal: InputMaybe<InternalFilterInput>;
+    parent: InputMaybe<NodeFilterInput>;
+    publishedAt: InputMaybe<DateQueryOperatorInput>;
+    revisedAt: InputMaybe<DateQueryOperatorInput>;
+    slideId: InputMaybe<StringQueryOperatorInput>;
+    slideTitle: InputMaybe<StringQueryOperatorInput>;
+    slideUrl: InputMaybe<StringQueryOperatorInput>;
+    sortIndex: InputMaybe<IntQueryOperatorInput>;
     updatedAt: InputMaybe<DateQueryOperatorInput>;
   };
 

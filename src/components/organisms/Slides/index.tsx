@@ -9,8 +9,14 @@ import {
 } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
+import { useAllMicrocmsSlideMetadata } from '@/hooks/query/allMicrocmsSlide';
 
+type allmicrocmsSlideProps = {
+  slideTitle: string;
+  slideUrl: string;
+};
 const Slides = () => {
+  const data = useAllMicrocmsSlideMetadata();
   return (
     <>
       <Stack direction={'row'}>
@@ -33,10 +39,13 @@ const Slides = () => {
       </Stack>
       <Stack direction={'row'} marginTop={12}>
         <UnorderedList textAlign={'left'}>
-          <ListItem>Lorem ipsum dolor sit amet</ListItem>
-          <ListItem>Consectetur adipiscing elit</ListItem>
-          <ListItem>Integer molestie lorem at massa</ListItem>
-          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+          {data.nodes.map((node: allmicrocmsSlideProps, index: number) => (
+            <Stack p={4} key={index}>
+              <ListItem>
+                <a href="{node.slideUrl}">{node.slideTitle}</a>
+              </ListItem>
+            </Stack>
+          ))}
         </UnorderedList>
       </Stack>
     </>
