@@ -28,7 +28,7 @@ const Job = () => {
           position={'absolute'}
           px={48}
         >
-          slide
+          job
         </Text>
       </Stack>
       <Stack direction={'row'} marginTop={12}>
