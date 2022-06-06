@@ -5,6 +5,3 @@ register({
 })
 
 module.exports = require('./gatsby-config.ts')
-module.exports = {
-  graphqlTypegen: true,
-}
