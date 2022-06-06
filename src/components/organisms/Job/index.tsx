@@ -10,7 +10,7 @@ import {
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
-const Slides = () => {
+const Job = () => {
   return (
     <>
       <Stack direction={'row'}>
@@ -33,14 +33,15 @@ const Slides = () => {
       </Stack>
       <Stack direction={'row'} marginTop={12}>
         <UnorderedList textAlign={'left'}>
-          <ListItem>Lorem ipsum dolor sit amet</ListItem>
-          <ListItem>Consectetur adipiscing elit</ListItem>
-          <ListItem>Integer molestie lorem at massa</ListItem>
-          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+          <ListItem>2022/05～ 合同会社DMM.com 内定者インターン</ListItem>
+          <ListItem>2022/04～ クラウドファーム株式会社 インターン</ListItem>
+          <ListItem>
+            2020/12～ 生活協同組合コープさっぽろ デジタル推進本部 インターン
+          </ListItem>
         </UnorderedList>
       </Stack>
     </>
   );
 };
 
-export default Slides;
+export default Job;

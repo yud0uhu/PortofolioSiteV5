@@ -4,6 +4,7 @@ import About from '@/components/organisms/About/index';
 import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';
 import DailyUi from '@/components/organisms/Dailyui/index';
+import Job from '@/components/organisms/Job/index';
 import React from 'react';
 import ReturntoButton from '@/components/atoms/ReturnTopButton/index';
 export default function HomePage() {
@@ -34,6 +35,9 @@ export default function HomePage() {
       </Flex>
       <Flex w={'full'} direction={'column'}>
         <Slides />
+      </Flex>
+      <Flex w={'full'} direction={'column'}>
+        <Job />
       </Flex>
       <ReturntoButton />
     </Stack>
