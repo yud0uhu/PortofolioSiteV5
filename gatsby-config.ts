@@ -40,8 +40,7 @@ const config: GatsbyConfig = {
       },
     },
   ],
-  // jsxRuntime: `automatic`,
-  // graphqlTypegen: true,
+  graphqlTypegen: true
 };
 
 export default config;
