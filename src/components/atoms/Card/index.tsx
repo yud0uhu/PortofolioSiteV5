@@ -7,10 +7,28 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
-import AllMicrocmsWorks from '../../../hooks/query/allMicrocmsWorks';
 import React from 'react';
-
-export default function Card() {
+type PallmicrocmsWorksProps = {
+  githubUrl: string;
+  productDatail: string;
+  productImage: string;
+  productTitle: string;
+  productUrl: string;
+  productComposition: string;
+  productData: Date;
+  sortIndex: number;
+};
+export default function Card(props: Props) {
+  const {
+    githubUrl,
+    productDatail,
+    productImage,
+    productTitle,
+    productUrl,
+    productComposition,
+    productData,
+    sortIndex,
+  } = props;
   return (
     <Center py={6}>
       <Box
@@ -30,7 +48,7 @@ export default function Card() {
           mb={6}
           pos={'relative'}
         >
-          <AllMicrocmsWorks />
+          <img src={productImage.url} />
           {/* <Image
             src={
               'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
@@ -46,26 +64,22 @@ export default function Card() {
             fontSize={'sm'}
             letterSpacing={1.1}
           >
-            Blog
+            {productComposition}
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
             fontFamily={'body'}
           >
-            Boost your conversion rate
+            {productTitle}
           </Heading>
-          <Text color={'gray.500'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
-          </Text>
+          <Text color={'gray.500'}>{productTitle}</Text>
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+            <Text fontWeight={600}>{githubUrl}</Text>
+            <Text fontWeight={600}>{productDatail}</Text>
+            <Text color={'gray.500'}>{productData}</Text>
           </Stack>
         </Stack>
       </Box>

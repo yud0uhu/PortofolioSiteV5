@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-export const AllMicrocmsWorks = () => {
+export const useMicrocmsWokrsMetadata = () => {
   const data = useStaticQuery(graphql`
     {
       allMicrocmsWorks {
@@ -15,12 +15,13 @@ export const AllMicrocmsWorks = () => {
           }
           productTitle
           productUrl
+          productComposition
+          productData
+          sortIndex
         }
       }
     }
   `);
-  console.log(data.allMicrocmsWorks);
-  return <pre>{JSON.stringify(data.allMicrocmsWorks, null, 4)}</pre>;
+  console.log(data);
+  return data.allMicrocmsWorks;
 };
-
-export default AllMicrocmsWorks;

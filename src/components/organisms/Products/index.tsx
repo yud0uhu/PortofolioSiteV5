@@ -3,7 +3,21 @@ import Card from '../../atoms/Card/index';
 import React from 'react';
 
 import Button from '../../atoms/Button/index';
+import { useMicrocmsWokrsMetadata } from '@/hooks/query/allMicrocmsWorks';
+
+type allmicrocmsWorksProps = {
+  githubUrl: string;
+  productDatail: string;
+  productImage: string;
+  productTitle: string;
+  productUrl: string;
+  productComposition: string;
+  productData: Date;
+  sortIndex: number;
+};
 const Products = () => {
+  const data = useMicrocmsWokrsMetadata();
+  console.log(data);
   return (
     <>
       <Stack direction={'row'}>
@@ -26,7 +40,20 @@ const Products = () => {
       </Stack>
       <Stack marginTop={12}>
         <Flex>
-          <Card />
+          {data.nodes.map((node: allmicrocmsWorksProps, index: number) => (
+            <Stack p={4} key={index}>
+              <Card
+                githubUrl={node.githubUrl}
+                productDatail={node.productDatail}
+                productImage={node.productImage}
+                productTitle={node.productTitle}
+                productUrl={node.productUrl}
+                productComposition={node.productComposition}
+                productData={node.productData}
+                key={index}
+              />
+            </Stack>
+          ))}
         </Flex>
         <Spacer />
         <Flex justifyContent="center">
