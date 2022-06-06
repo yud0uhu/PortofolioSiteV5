@@ -8,25 +8,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
-type allmicrocmsWorksProps = {
-  githubUrl: string;
-  productDatail: string;
-  productImage: string;
-  productTitle: string;
-  productUrl: string;
-  productComposition: string;
-  productData: Date;
+type allmicrocmsDailyuiProps = {
+  figma: string;
+  title: string;
+  image: string;
 };
-export default function Card(props: allmicrocmsWorksProps) {
-  const {
-    githubUrl,
-    productDatail,
-    productImage,
-    productTitle,
-    productUrl,
-    productComposition,
-    productData,
-  } = props;
+export default function uiCard(props: allmicrocmsDailyuiProps) {
+  const { figma, title, image } = props;
   return (
     <Center py={6}>
       <Box
@@ -39,7 +27,7 @@ export default function Card(props: allmicrocmsWorksProps) {
         overflow={'hidden'}
       >
         <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <img src={productImage.url} alt={productImage} />
+          <img src={image.url} alt={image} />
         </Box>
         <Stack>
           <Text
@@ -49,21 +37,21 @@ export default function Card(props: allmicrocmsWorksProps) {
             fontSize={'sm'}
             letterSpacing={1.1}
           >
-            {productComposition}
+            {title}
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
             fontFamily={'body'}
           >
-            {productTitle}
+            {title}
           </Heading>
-          <Text color={'gray.500'}>{productTitle}</Text>
+          <Text color={'gray.500'}>
+            <a href={figma}>{figma}</a>
+          </Text>
         </Stack>
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-          <Text fontWeight={600}>{githubUrl}</Text>
-          <Text fontWeight={600}>{productDatail}</Text>
-          <Text color={'gray.500'}>{productData}</Text>
+          <Text color={'gray.500'}></Text>
         </Stack>
       </Box>
     </Center>

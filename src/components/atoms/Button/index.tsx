@@ -1,7 +1,11 @@
 import { Text, Button } from '@chakra-ui/react';
 import React from 'react';
 
-const button = () => {
+type Props = {
+  text: string;
+};
+const button = (props: Props) => {
+  const { text } = props;
   return (
     <Button
       variant="outline"
@@ -15,7 +19,7 @@ const button = () => {
       py={6}
       px={14}
     >
-      <Text color="#40322A">View More ＞ </Text>
+      <Text color="#40322A">{text}</Text>
     </Button>
   );
 };
