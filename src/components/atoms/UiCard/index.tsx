@@ -47,7 +47,7 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
             {title}
           </Heading>
           <Text color={'gray.500'}>
-            <a href={figma}>{figma}</a>
+            <a href={figma ? figma : ''}>{figma}</a>
           </Text>
         </Stack>
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>
