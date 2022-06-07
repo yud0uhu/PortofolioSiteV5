@@ -17,10 +17,18 @@ export default function HomePage() {
       spacing={{ base: 8, md: 14 }}
       py={{ base: 20, md: 36 }}
     >
-      <Stack>
+      <Stack>{/* <Image src={LogoIcon} alt="logo" /> */}</Stack>
+      <Stack
+        direction={'column'}
+        spacing={3}
+        pb={36}
+        align={'center'}
+        alignSelf={'center'}
+        position={'relative'}
+      >
         <Image src={LogoIcon} alt="logo" />
+        {/* <Hero /> */}
       </Stack>
-
       <Flex w={'full'} direction={'column'}>
         <About />
       </Flex>
