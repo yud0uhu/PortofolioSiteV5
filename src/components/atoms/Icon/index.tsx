@@ -8,7 +8,11 @@ type IconProps = {
 
 export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
   return (
-    <Box marginLeft={marginLeft}>
+    <Box
+      marginLeft={marginLeft}
+      marginTop={2}
+      width={{ base: '96px', md: '96px', sm: '48px' }}
+    >
       <img src={iconImageUrl} alt={iconImageUrl} />
     </Box>
   );

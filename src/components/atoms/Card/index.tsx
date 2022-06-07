@@ -62,10 +62,20 @@ export default function Card(props: allmicrocmsWorksProps) {
         </Stack>
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>
           <a href={githubUrl}>
-            <Text fontWeight={600}>{githubUrl}</Text>
+            <Text
+              fontSize={{ base: '20px', md: '20px' }}
+              fontWeight={600}
+              textAlign={'left'}
+            >
+              {githubUrl}
+            </Text>
           </a>
-          <Text fontWeight={600}>{productDatail}</Text>
-          <Text color={'gray.500'}>{productData}</Text>
+          <Text fontWeight={600} textAlign={'left'}>
+            {productDatail}
+          </Text>
+          <Text color={'gray.500'} textAlign={'left'}>
+            {productData}
+          </Text>
         </Stack>
       </Box>
     </Center>

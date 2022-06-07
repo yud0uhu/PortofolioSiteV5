@@ -29,7 +29,7 @@ const Products = () => {
       <Stack direction={'row'}>
         <Divider
           marginTop={12}
-          w={{ base: 45, sm: 90, md: 180 }}
+          w={{ base: 90, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
           opacity="1"

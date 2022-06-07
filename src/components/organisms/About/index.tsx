@@ -8,7 +8,7 @@ const About = () => {
       <Stack direction={'row'}>
         <Divider
           marginTop={12}
-          w={{ base: 45, sm: 90, md: 180 }}
+          w={{ base: 90, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
           opacity="1"
@@ -25,15 +25,13 @@ const About = () => {
       </Stack>
       <Stack direction={'row'} marginTop={12}>
         <Box textAlign="left" px={12}>
-          <Text fontWeight="bold" fontSize={'2xl'}>
+          <Text fontWeight="bold" fontSize={{ base: 'xl', md: 'xl', sm: 'sm' }}>
             0Yu(zero yu)
           </Text>
-          <Text>
+          <Text fontSize={{ base: 'xl', sm: 'sm', md: 'xl' }}>
             試される大地のサブカルオタク
             <br />
-            Webやゲームエンジンでものづ
-            <br />
-            くりをするのが好きです
+            Webやゲームエンジンでものづくりをするのが好きです
             <br />
           </Text>
         </Box>
