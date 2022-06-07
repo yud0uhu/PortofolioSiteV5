@@ -6,6 +6,7 @@ import {
   Text,
   Stack,
   useColorModeValue,
+  Image,
 } from '@chakra-ui/react';
 import React from 'react';
 type allmicrocmsWorksProps = {
@@ -30,16 +31,16 @@ export default function Card(props: allmicrocmsWorksProps) {
   return (
     <Center py={6}>
       <Box
-        maxW={'300px'}
+        height={'lg'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
+        boxShadow={'md'}
         rounded={'md'}
         p={6}
         overflow={'hidden'}
       >
         <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <img src={productImage.url} alt={productImage} />
+          <Image src={productImage.url} alt={productImage} />
         </Box>
         <Stack>
           <Text
@@ -53,15 +54,16 @@ export default function Card(props: allmicrocmsWorksProps) {
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
+            fontSize={'md'}
             fontFamily={'body'}
           >
             {productTitle}
           </Heading>
-          <Text color={'gray.500'}>{productTitle}</Text>
         </Stack>
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-          <Text fontWeight={600}>{githubUrl}</Text>
+          <a href={githubUrl}>
+            <Text fontWeight={600}>{githubUrl}</Text>
+          </a>
           <Text fontWeight={600}>{productDatail}</Text>
           <Text color={'gray.500'}>{productData}</Text>
         </Stack>

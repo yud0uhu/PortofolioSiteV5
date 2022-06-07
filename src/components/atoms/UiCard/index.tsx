@@ -5,6 +5,7 @@ import {
   Heading,
   Text,
   Stack,
+  Image,
   useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -18,18 +19,18 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
   return (
     <Center py={6}>
       <Box
-        maxW={'300px'}
+        height={'sm'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
+        boxShadow={'md'}
         rounded={'md'}
         p={6}
         overflow={'hidden'}
       >
         <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <img src={image.url} alt={image} />
+          <Image src={image.url} alt={image} />
         </Box>
-        <Stack>
+        <Stack height={'80px'}>
           <Text
             color={'#B3D4FC'}
             textTransform={'uppercase'}
@@ -41,18 +42,18 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
+            fontSize={'xl'}
             fontFamily={'body'}
           >
             {title}
           </Heading>
-          <Text color={'gray.500'}>
+          {/* <Text color={'gray.500'}>
             <a href={figma ? figma : ''}>{figma}</a>
-          </Text>
+          </Text> */}
         </Stack>
-        <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+        {/* <Stack direction={'column'} spacing={0} fontSize={'sm'}>
           <Text color={'gray.500'}></Text>
-        </Stack>
+        </Stack> */}
       </Box>
     </Center>
   );

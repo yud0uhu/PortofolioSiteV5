@@ -5,7 +5,7 @@ import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';
 import DailyUi from '@/components/organisms/Dailyui/index';
 import Job from '@/components/organisms/Job/index';
-import { Image } from '@chakra-ui/react';
+import { Img } from '@chakra-ui/react';
 import LogoIcon from '@/static/Logo.png';
 import React from 'react';
 import ReturntoButton from '@/components/atoms/ReturnTopButton/index';
@@ -26,8 +26,7 @@ export default function HomePage() {
         alignSelf={'center'}
         position={'relative'}
       >
-        <Image src={LogoIcon} alt="logo" />
-        {/* <Hero /> */}
+        <Img objectFit="cover" src={LogoIcon} alt="logo" />
       </Stack>
       <Flex w={'full'} direction={'column'}>
         <About />
