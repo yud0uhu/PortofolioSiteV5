@@ -40,9 +40,9 @@ const Slides = () => {
       <Stack direction={'row'} marginTop={12}>
         <UnorderedList textAlign={'left'}>
           {data.nodes.map((node: allmicrocmsSlideProps, index: number) => (
-            <Stack p={4} key={index}>
+            <Stack p={2} key={index}>
               <ListItem>
-                <a href="{node.slideUrl}">{node.slideTitle}</a>
+                <a href={node.slideUrl}>{node.slideTitle}</a>
               </ListItem>
             </Stack>
           ))}
