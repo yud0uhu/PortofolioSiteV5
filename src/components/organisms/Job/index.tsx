@@ -35,9 +35,9 @@ const Job = () => {
         <UnorderedList textAlign={'left'}>
           <ListItem>2022/05～ 合同会社DMM.com 内定者インターン</ListItem>
           <ListItem>2022/04～ クラウドファーム株式会社 インターン</ListItem>
-          <ListItem>2021/04 Cookpad Summer Internship 2022</ListItem>
+          <ListItem>2022/04 クックパッド春の超絶技巧パンまつり</ListItem>
           <ListItem>
-            2021/03 サイバーエージェント Web Speed Hackathon 2022
+            2022/03 サイバーエージェント Web Speed Hackathon 2022
           </ListItem>
           <ListItem>2022/01 技育CAMPvol.13</ListItem>
           <ListItem>2021/12 JPHACKS 2021</ListItem>
