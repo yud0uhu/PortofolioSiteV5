@@ -6,7 +6,7 @@ import {
   Text,
   Stack,
   useColorModeValue,
-  Image,
+  Img,
 } from '@chakra-ui/react';
 import React from 'react';
 type allmicrocmsWorksProps = {
@@ -40,7 +40,7 @@ export default function Card(props: allmicrocmsWorksProps) {
         overflow={'hidden'}
       >
         <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <Image src={productImage.url} alt={productImage} />
+          <Img src={productImage.url} alt={productImage} />
         </Box>
         <Stack>
           <Text

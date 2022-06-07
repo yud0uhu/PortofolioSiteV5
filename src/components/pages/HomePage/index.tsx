@@ -5,8 +5,6 @@ import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';
 import DailyUi from '@/components/organisms/Dailyui/index';
 import Job from '@/components/organisms/Job/index';
-import { Img } from '@chakra-ui/react';
-import LogoIcon from '@/static/Logo.png';
 import React from 'react';
 import ReturntoButton from '@/components/atoms/ReturnTopButton/index';
 export default function HomePage() {
@@ -17,17 +15,6 @@ export default function HomePage() {
       spacing={{ base: 8, md: 14 }}
       py={{ base: 20, md: 36 }}
     >
-      <Stack>{/* <Image src={LogoIcon} alt="logo" /> */}</Stack>
-      <Stack
-        direction={'column'}
-        spacing={3}
-        pb={36}
-        align={'center'}
-        alignSelf={'center'}
-        position={'relative'}
-      >
-        <Img objectFit="cover" src={LogoIcon} alt="logo" />
-      </Stack>
       <Flex w={'full'} direction={'column'}>
         <About />
       </Flex>

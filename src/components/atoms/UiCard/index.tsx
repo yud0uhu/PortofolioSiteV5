@@ -5,7 +5,7 @@ import {
   Heading,
   Text,
   Stack,
-  Image,
+  Img,
   useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -28,7 +28,7 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
         overflow={'hidden'}
       >
         <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <Image src={image.url} alt={image} />
+          <Img src={image.url} alt={image} />
         </Box>
         <Stack height={'80px'}>
           <Text
