@@ -43,7 +43,7 @@ const Products = () => {
       <Stack marginTop={12}>
         <SimpleGrid columns={3}>
           {data.nodes.map((node: allmicrocmsDailyuiProps, index: number) => (
-            <Stack p={4} key={index}>
+            <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
               <UiCard
                 figma={node.figma}
                 title={node.title}

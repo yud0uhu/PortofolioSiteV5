@@ -40,7 +40,7 @@ const Slides = () => {
       <Stack direction={'row'} marginTop={12}>
         <UnorderedList textAlign={'left'}>
           {data.nodes.map((node: allmicrocmsSlideProps, index: number) => (
-            <Stack p={2} key={index}>
+            <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
               <ListItem>
                 <a href={node.slideUrl}>{node.slideTitle}</a>
               </ListItem>

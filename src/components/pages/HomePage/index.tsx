@@ -1,5 +1,5 @@
-import { Stack, Flex, Box } from '@chakra-ui/react';
-import Header from '@/components/organisms/Header/index';
+import { Text, Stack, Flex, Box } from '@chakra-ui/react';
+import Hero from '@/components/organisms/Hero/index';
 import About from '@/components/organisms/About/index';
 import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';
@@ -22,7 +22,10 @@ export default function HomePage() {
         alignSelf={'center'}
         position={'relative'}
       >
-        <Header />
+        <Flex>
+          <Text>aaa</Text>
+        </Flex>
+        <Hero />
       </Stack>
       <Flex w={'full'} direction={'column'}>
         <About />

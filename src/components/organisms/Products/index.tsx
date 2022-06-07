@@ -47,7 +47,7 @@ const Products = () => {
       <Stack marginTop={12}>
         <SimpleGrid columns={3}>
           {data.nodes.map((node: allmicrocmsWorksProps, index: number) => (
-            <Stack p={4} key={index}>
+            <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
               <Card
                 githubUrl={node.githubUrl}
                 productDatail={node.productDatail}
