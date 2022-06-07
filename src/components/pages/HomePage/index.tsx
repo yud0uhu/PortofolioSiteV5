@@ -20,15 +20,7 @@ export default function HomePage() {
       <Stack>
         <Image src={LogoIcon} alt="logo" />
       </Stack>
-      <Stack
-        direction={'column'}
-        spacing={3}
-        align={'center'}
-        alignSelf={'center'}
-        position={'relative'}
-      >
-        <Hero />
-      </Stack>
+
       <Flex w={'full'} direction={'column'}>
         <About />
       </Flex>
