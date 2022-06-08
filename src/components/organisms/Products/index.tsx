@@ -44,7 +44,7 @@ const Products = () => {
           fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={52}
+          px={{ base: '36', sm: '36', md: '52' }}
         >
           products
         </Text>

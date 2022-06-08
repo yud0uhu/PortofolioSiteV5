@@ -50,9 +50,9 @@ const Products = () => {
           fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={52}
+          px={{ base: '36', sm: '36', md: '52' }}
         >
-          Daily UI
+          daily ui
         </Text>
       </Stack>
       <Stack marginTop={6}>
@@ -75,7 +75,7 @@ const Products = () => {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
           <IconButton
-            colorScheme="teal"
+            colorScheme="orange"
             aria-label="left-arrow"
             borderRadius="full"
             position="absolute"
@@ -84,10 +84,10 @@ const Products = () => {
             zIndex={2}
             onClick={() => slider?.slickPrev()}
           >
-            <ArrowLeftIcon w={6} h={6} />
+            <ArrowLeftIcon />
           </IconButton>
           <IconButton
-            colorScheme="teal"
+            colorScheme="orange"
             aria-label="right-arrow"
             borderRadius="full"
             position="absolute"
@@ -96,7 +96,7 @@ const Products = () => {
             zIndex={2}
             onClick={() => slider?.slickNext()}
           >
-            <ArrowRightIcon w={6} h={6} />
+            <ArrowRightIcon />
           </IconButton>
           {/* Slider */}
           <Slider {...settings} ref={(slider) => setSlider(slider)}>

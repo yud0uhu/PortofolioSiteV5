@@ -17,17 +17,21 @@ const About = () => {
           fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={52}
+          px={{ base: '36', sm: '36', md: '52' }}
         >
           about me
         </Text>
       </Stack>
       <Stack direction={'row'} marginTop={6}>
         <Box px={2}>
-          <Text fontWeight="bold" fontSize={{ base: 'md', sm: 'md' }}>
+          <Text
+            fontWeight="bold"
+            fontSize={{ base: 'xl', sm: 'md', md: '2xl' }}
+            textAlign="left"
+          >
             0Yu(zero yu)
           </Text>
-          <Text fontSize={{ base: 'md', sm: 'md' }}>
+          <Text fontSize={{ base: 'md', sm: 'md', md: 'xl' }} textAlign="left">
             試される大地のサブカルオタク
             <br />
             Webやゲームエンジンでものづくりをするのが好きです

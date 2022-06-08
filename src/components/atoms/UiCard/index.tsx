@@ -22,7 +22,7 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
       position="relative"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
-      backgroundSize={{ base: '400px', md: 'cover', sm: '400px' }}
+      backgroundSize={{ base: '300px', md: 'cover', sm: '300px' }}
       backgroundImage={image.url}
     />
   );
