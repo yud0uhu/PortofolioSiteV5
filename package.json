@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "3.0.0",
+    "@chakra-ui/icons": "2.0.2",
     "@chakra-ui/layout": "2.0.1",
     "@chakra-ui/react": "2.1.2",
     "@emotion/react": "11.9.0",
@@ -43,6 +44,7 @@
     "gatsby-source-microcms": "2.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-slick": "0.29.0",
     "recoil": "0.7.3",
     "storybook-addon-designs": "6.2.1",
     "tsconfig-paths-webpack-plugin": "3.5.2"

@@ -7,22 +7,22 @@ const About = () => {
     <>
       <Stack direction={'row'}>
         <Divider
-          marginTop={12}
+          marginTop={6}
           w={{ base: 90, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
         />
         <Text
           fontWeight="bold"
-          fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={48}
+          px={52}
         >
           about me
         </Text>
       </Stack>
-      <Stack direction={'row'} marginTop={12}>
+      <Stack direction={'row'} marginTop={6}>
         <Box px={2}>
           <Text fontWeight="bold" fontSize={{ base: 'md', sm: 'md' }}>
             0Yu(zero yu)

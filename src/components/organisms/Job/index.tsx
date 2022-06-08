@@ -15,25 +15,26 @@ const Job = () => {
     <>
       <Stack direction={'row'}>
         <Divider
-          marginTop={12}
-          w={{ base: 45, sm: 90, md: 180 }}
+          marginTop={6}
+          w={{ base: 45, sm: 45, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
         />
         <Text
           fontWeight="bold"
-          fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={48}
+          px={52}
         >
-          Intern & HackaThon
+          Intern & <br />
+          HackaThon
         </Text>
       </Stack>
-      <Stack direction={'row'} marginTop={12}>
+      <Stack direction={'row'} marginTop={6}>
         <UnorderedList
           textAlign={'left'}
-          marginTop={{ base: '12', sm: '24', md: '24' }}
+          marginTop={{ base: '4', sm: '24', md: '24' }}
         >
           <ListItem>2022/05～ 合同会社DMM.com 内定者インターン</ListItem>
           <ListItem>2022/04～ クラウドファーム株式会社 インターン</ListItem>

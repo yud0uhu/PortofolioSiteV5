@@ -11,7 +11,7 @@ export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
     <Box
       marginLeft={marginLeft}
       marginTop={2}
-      width={{ base: '96px', md: '96px', sm: '48px' }}
+      width={{ base: '48px', md: '96px', sm: '48px' }}
     >
       <img src={iconImageUrl} alt={iconImageUrl} />
     </Box>

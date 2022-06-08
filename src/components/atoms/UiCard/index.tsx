@@ -17,22 +17,13 @@ type allmicrocmsDailyuiProps = {
 export default function uiCard(props: allmicrocmsDailyuiProps) {
   const { figma, title, image } = props;
   return (
-    <Center py={2}>
-      {/* TODO: カルーセルにする？ */}
-      <Box
-        maxW="sm"
-        borderWidth="1px"
-        h="400px"
-        bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'md'}
-        rounded={'md'}
-        p={6}
-        overflow={'hidden'}
-      >
-        <Box mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <Img src={image.url} alt={image} />
-        </Box>
-      </Box>
-    </Center>
+    <Box
+      height={{ base: '400px', md: '600px', sm: '400px' }}
+      position="relative"
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize={{ base: '400px', md: 'cover', sm: '400px' }}
+      backgroundImage={image.url}
+    />
   );
 }

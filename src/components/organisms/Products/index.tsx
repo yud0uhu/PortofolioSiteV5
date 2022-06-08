@@ -34,22 +34,22 @@ const Products = () => {
     <>
       <Stack direction={'row'}>
         <Divider
-          marginTop={12}
+          marginTop={6}
           w={{ base: 90, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
         />
         <Text
           fontWeight="bold"
-          fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={48}
+          px={52}
         >
           products
         </Text>
       </Stack>
-      <Stack marginTop={12}>
+      <Stack marginTop={6}>
         {/* <SimpleGrid columns={{ sm: 1, md: 2 }}>
           {data.nodes.map((node: allmicrocmsWorksProps, i: number) => (
             <Stack p={2} key={i} _hover={{ bg: 'gray.100' }}>
@@ -76,7 +76,7 @@ const Products = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Stack marginTop={12}>
+                <Stack marginTop={6}>
                   <SimpleGrid columns={{ sm: 1, md: 2 }}>
                     {data.nodes.map(
                       (node: allmicrocmsWorksProps, i: number) => (

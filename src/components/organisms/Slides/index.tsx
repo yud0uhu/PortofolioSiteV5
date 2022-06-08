@@ -21,22 +21,22 @@ const Slides = () => {
     <>
       <Stack direction={'row'}>
         <Divider
-          marginTop={12}
-          w={{ base: 45, sm: 90, md: 180 }}
+          marginTop={6}
+          w={{ base: 45, sm: 45, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
         />
         <Text
           fontWeight="bold"
-          fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
           justifyContent="left"
           position={'absolute'}
-          px={48}
+          px={52}
         >
           slide
         </Text>
       </Stack>
-      <Stack direction={'row'} marginTop={12}>
+      <Stack direction={'row'} marginTop={6}>
         <UnorderedList textAlign={'left'}>
           {data.nodes.map((node: allmicrocmsSlideProps, index: number) => (
             <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
