@@ -45,9 +45,9 @@ const Products = () => {
         </Text>
       </Stack>
       <Stack marginTop={12}>
-        <SimpleGrid columns={3}>
-          {data.nodes.map((node: allmicrocmsWorksProps, index: number) => (
-            <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
+        <SimpleGrid columns={{ sm: 1, md: 2 }}>
+          {data.nodes.map((node: allmicrocmsWorksProps, i: number) => (
+            <Stack p={2} key={i} _hover={{ bg: 'gray.100' }}>
               <Card
                 githubUrl={node.githubUrl}
                 productDatail={node.productDatail}
@@ -56,7 +56,7 @@ const Products = () => {
                 productUrl={node.productUrl}
                 productComposition={node.productComposition}
                 productData={node.productData}
-                key={index}
+                key={i}
               />
             </Stack>
           ))}

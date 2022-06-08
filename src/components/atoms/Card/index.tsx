@@ -1,12 +1,16 @@
 // import Image from 'next/image';
+import Button from '@/components/atoms/Button/index';
 import {
   Box,
+  Flex,
   Center,
   Heading,
   Text,
   Stack,
   useColorModeValue,
   Img,
+  Spacer,
+  Badge,
 } from '@chakra-ui/react';
 import React from 'react';
 type allmicrocmsWorksProps = {
@@ -29,29 +33,31 @@ export default function Card(props: allmicrocmsWorksProps) {
     productData,
   } = props;
   return (
-    <Center py={6}>
+    <Center py={2}>
       <Box
-        height={'lg'}
-        w={'full'}
+        maxW="sm"
+        borderWidth="1px"
+        h="400px"
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'md'}
         rounded={'md'}
         p={6}
         overflow={'hidden'}
       >
-        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-          <Img src={productImage.url} alt={productImage} />
+        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} p={2} pos={'relative'}>
+          <Img
+            overflow={'hidden'}
+            src={productImage.url}
+            maxH={'150px'}
+            alt={productImage}
+          />
         </Box>
         <Stack>
-          <Text
-            color={'#B3D4FC'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}
-          >
-            {productComposition}
-          </Text>
+          <Box display="flex" alignItems="baseline">
+            <Badge noOfLines={1} borderRadius="full" px="2" colorScheme="teal">
+              {productComposition}
+            </Badge>
+          </Box>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'md'}
@@ -60,22 +66,24 @@ export default function Card(props: allmicrocmsWorksProps) {
             {productTitle}
           </Heading>
         </Stack>
+        <Text color={'gray.500'}>{productData}</Text>
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>
           <a href={githubUrl}>
-            <Text
-              fontSize={{ base: '20px', md: '20px' }}
-              fontWeight={600}
-              textAlign={'left'}
-            >
-              {githubUrl}
-            </Text>
+            <Text fontSize={'sm'}>GitHub</Text>
           </a>
-          <Text fontWeight={600} textAlign={'left'}>
-            {productDatail}
+          <Text lineHeight="tight">
+            <Box
+              mt="1"
+              fontWeight="semibold"
+              as="h4"
+              lineHeight="tight"
+              noOfLines={1}
+            >
+              {productDatail}
+            </Box>
           </Text>
-          <Text color={'gray.500'} textAlign={'left'}>
-            {productData}
-          </Text>
+          {/* TODO: Moreでモーダル出す */}
+          <Button text={'More ＞'} />
         </Stack>
       </Box>
     </Center>

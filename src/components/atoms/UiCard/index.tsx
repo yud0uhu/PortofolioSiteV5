@@ -17,43 +17,21 @@ type allmicrocmsDailyuiProps = {
 export default function uiCard(props: allmicrocmsDailyuiProps) {
   const { figma, title, image } = props;
   return (
-    <Center py={6}>
+    <Center py={2}>
+      {/* TODO: カルーセルにする？ */}
       <Box
-        height={'sm'}
-        w={'full'}
+        maxW="sm"
+        borderWidth="1px"
+        h="400px"
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'md'}
         rounded={'md'}
         p={6}
         overflow={'hidden'}
       >
-        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+        <Box mt={-6} mx={-6} mb={6} pos={'relative'}>
           <Img src={image.url} alt={image} />
         </Box>
-        <Stack height={'80px'}>
-          <Text
-            color={'#B3D4FC'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}
-          >
-            {title}
-          </Text>
-          <Heading
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'xl'}
-            fontFamily={'body'}
-          >
-            {title}
-          </Heading>
-          {/* <Text color={'gray.500'}>
-            <a href={figma ? figma : ''}>{figma}</a>
-          </Text> */}
-        </Stack>
-        {/* <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-          <Text color={'gray.500'}></Text>
-        </Stack> */}
       </Box>
     </Center>
   );

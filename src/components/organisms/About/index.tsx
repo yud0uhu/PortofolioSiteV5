@@ -11,7 +11,6 @@ const About = () => {
           w={{ base: 90, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
-          opacity="1"
         />
         <Text
           fontWeight="bold"
@@ -24,20 +23,24 @@ const About = () => {
         </Text>
       </Stack>
       <Stack direction={'row'} marginTop={12}>
-        <Box textAlign="left" px={12}>
-          <Text fontWeight="bold" fontSize={{ base: 'xl', md: 'xl', sm: 'sm' }}>
+        <Box px={2}>
+          <Text fontWeight="bold" fontSize={{ base: 'md', sm: 'md' }}>
             0Yu(zero yu)
           </Text>
-          <Text fontSize={{ base: 'xl', sm: 'sm', md: 'xl' }}>
+          <Text fontSize={{ base: 'md', sm: 'md' }}>
             試される大地のサブカルオタク
             <br />
             Webやゲームエンジンでものづくりをするのが好きです
             <br />
           </Text>
         </Box>
-        <Flex>
+        <Box
+          display="flex"
+          flexDirection="row"
+          maxWidth={{ base: 'md', sm: 'sm' }}
+        >
           <IconLink />
-        </Flex>
+        </Box>
       </Stack>
     </>
   );

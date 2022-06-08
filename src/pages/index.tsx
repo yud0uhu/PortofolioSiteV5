@@ -19,15 +19,9 @@ export default function Home() {
           alignSelf={'center'}
           position={'relative'}
         >
-          <Img
-            width={'1680px'}
-            height={'240px'}
-            objectFit="cover"
-            src={LogoIcon}
-            alt="logo"
-          />
+          <Img objectFit="cover" src={LogoIcon} alt="logo" />
         </Stack>
-        <Container maxW={'5xl'}>
+        <Container maxWidth={'2xl'}>
           <HomePage />
         </Container>
       </RecoilRoot>
