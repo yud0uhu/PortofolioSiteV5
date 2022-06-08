@@ -22,7 +22,7 @@ const Products = () => {
   console.log(data);
   return (
     <>
-      <Stack direction={'row'}>
+      {/* <Stack direction={'row'}>
         <Divider
           marginTop={12}
           w={{ base: 45, sm: 90, md: 180 }}
@@ -57,7 +57,7 @@ const Products = () => {
         <Flex justifyContent="center">
           <Button text={'View More ＞'} />
         </Flex>
-      </Stack>
+      </Stack> */}
     </>
   );
 };

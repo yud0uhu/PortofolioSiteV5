@@ -12,14 +12,19 @@ export default function Home() {
     <ChakraProvider theme={theme}>
       <RecoilRoot>
         <Stack
-          direction={'column'}
           spacing={3}
           pt={36}
           align={'center'}
           alignSelf={'center'}
           position={'relative'}
         >
-          <Img objectFit="cover" src={LogoIcon} alt="logo" />
+          <Img
+            width={'full'}
+            height={'full'}
+            objectFit="contain"
+            src={LogoIcon}
+            alt="logo"
+          />
         </Stack>
         <Container maxWidth={'2xl'}>
           <HomePage />
