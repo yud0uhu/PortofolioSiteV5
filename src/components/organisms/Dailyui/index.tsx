@@ -28,7 +28,7 @@ const Products = () => {
           w={{ base: 45, sm: 90, md: 180 }}
           borderWidth={5}
           borderColor={'#B3D4FC'}
-          opacity="1"
+          
         />
         <Text
           fontWeight="bold"
