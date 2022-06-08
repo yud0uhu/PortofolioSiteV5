@@ -5,7 +5,7 @@ import theme from '@/components/themes/default';
 import React from 'react';
 import { RecoilRoot } from 'recoil';
 import { Img } from '@chakra-ui/react';
-import LogoIcon from '@/static/Logo.png';
+import LogoIcon from '@/static/ProfileBanner.png';
 
 export default function Home() {
   return (
@@ -19,14 +19,14 @@ export default function Home() {
           position={'relative'}
         >
           <Img
-            width={'full'}
-            height={'full'}
-            objectFit="contain"
+            width={{ base: 'sm', md: '1500px', sm: 'sm' }}
+            height={{ base: 'full', md: 'full', sm: 'full' }}
+            objectFit="cover"
             src={LogoIcon}
             alt="logo"
           />
         </Stack>
-        <Container maxWidth={'2xl'}>
+        <Container maxWidth={'6xl'}>
           <HomePage />
         </Container>
       </RecoilRoot>

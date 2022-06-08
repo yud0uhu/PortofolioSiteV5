@@ -1,13 +1,5 @@
 // import Image from 'next/image';
-import {
-  Box,
-  Center,
-  Heading,
-  Text,
-  Stack,
-  Img,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 type allmicrocmsDailyuiProps = {
   figma: string;
