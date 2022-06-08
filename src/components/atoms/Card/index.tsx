@@ -83,7 +83,7 @@ export default function Card(props: allmicrocmsWorksProps) {
             </Box>
           </Text>
           {/* TODO: Moreでモーダル出す */}
-          <Button text={'More ＞'} />
+          <Button text={'View More ＞'} />
         </Stack>
       </Box>
     </Center>

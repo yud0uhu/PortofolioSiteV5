@@ -5,6 +5,12 @@ import {
   Flex,
   Text,
   Stack,
+  AccordionButton,
+  AccordionItem,
+  Box,
+  AccordionPanel,
+  AccordionIcon,
+  Accordion,
 } from '@chakra-ui/react';
 import Card from '@/components/atoms/Card/index';
 import React from 'react';
@@ -45,7 +51,7 @@ const Products = () => {
         </Text>
       </Stack>
       <Stack marginTop={12}>
-        <SimpleGrid columns={{ sm: 1, md: 2 }}>
+        {/* <SimpleGrid columns={{ sm: 1, md: 2 }}>
           {data.nodes.map((node: allmicrocmsWorksProps, i: number) => (
             <Stack p={2} key={i} _hover={{ bg: 'gray.100' }}>
               <Card
@@ -60,10 +66,40 @@ const Products = () => {
               />
             </Stack>
           ))}
-        </SimpleGrid>
+        </SimpleGrid> */}
         <Spacer />
         <Flex justifyContent="center">
-          <Button text={'View More ＞'} />
+          <Accordion defaultIndex={[0]} allowMultiple>
+            <AccordionItem>
+              <h2>
+                <AccordionButton justifyContent="center">
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <Stack marginTop={12}>
+                  <SimpleGrid columns={{ sm: 1, md: 2 }}>
+                    {data.nodes.map(
+                      (node: allmicrocmsWorksProps, i: number) => (
+                        <Stack p={2} key={i} _hover={{ bg: 'gray.100' }}>
+                          <Card
+                            githubUrl={node.githubUrl}
+                            productDatail={node.productDatail}
+                            productImage={node.productImage}
+                            productTitle={node.productTitle}
+                            productUrl={node.productUrl}
+                            productComposition={node.productComposition}
+                            productData={node.productData}
+                            key={i}
+                          />
+                        </Stack>
+                      ),
+                    )}
+                  </SimpleGrid>
+                </Stack>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
         </Flex>
       </Stack>
     </>
