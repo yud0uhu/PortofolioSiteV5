@@ -31,7 +31,10 @@ const Job = () => {
         </Text>
       </Stack>
       <Stack direction={'row'} marginTop={12}>
-        <UnorderedList textAlign={'left'}>
+        <UnorderedList
+          textAlign={'left'}
+          marginTop={{ base: '12', sm: '24', md: '24' }}
+        >
           <ListItem>2022/05～ 合同会社DMM.com 内定者インターン</ListItem>
           <ListItem>2022/04～ クラウドファーム株式会社 インターン</ListItem>
           <ListItem>2022/04 クックパッド春の超絶技巧パンまつり</ListItem>
