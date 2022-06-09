@@ -23,6 +23,13 @@ export default function CardCarousel(props: allmicrocmsWorksProps) {
   } = props;
   return (
     <>
+      <Heading
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+        fontFamily={'Reggae One'}
+        color={'#40322A'}
+      >
+        <Text>{productTitle}</Text>
+      </Heading>
       <Text>{productDatail}</Text>
       <Text>{productComposition}</Text>
       <Box
@@ -41,14 +48,7 @@ export default function CardCarousel(props: allmicrocmsWorksProps) {
             position="absolute"
             top="50%"
             transform="translate(0, -50%)"
-          >
-            <Heading
-              fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
-              fontFamily={'Reggae One'}
-            >
-              {productTitle}
-            </Heading>
-          </Stack>
+          ></Stack>
         </Container>
       </Box>
     </>

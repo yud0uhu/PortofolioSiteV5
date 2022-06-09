@@ -30,9 +30,7 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
           <Heading
             fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
             fontFamily={'Reggae One'}
-          >
-            {title}
-          </Heading>
+          ></Heading>
         </Stack>
       </Container>
     </Box>
