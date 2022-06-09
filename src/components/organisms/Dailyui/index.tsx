@@ -63,7 +63,7 @@ const Products = () => {
         </VStack>
         <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
-      <Stack marginTop={6}>
+      <Stack marginTop={2}>
         <Box
           position={'relative'}
           height={'600px'}
