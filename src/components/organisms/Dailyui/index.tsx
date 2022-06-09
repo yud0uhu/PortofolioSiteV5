@@ -10,6 +10,7 @@ import {
   Divider,
   Spacer,
   HStack,
+  VStack,
 } from '@chakra-ui/react';
 import UiCard from '@/components/atoms/UiCard/index';
 
@@ -47,14 +48,19 @@ const Products = () => {
     <>
       <HStack direction={'row'}>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
-        <Text
-          fontWeight="bold"
-          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
-          px={{ base: '12', sm: '12', md: '64' }}
-          fontFamily={'Reggae One'}
-        >
-          daily ui
-        </Text>
+        <VStack direction={'row'}>
+          <Text
+            fontWeight="bold"
+            fontSize={{ base: '40px', sm: '40px', md: '40px' }}
+            px={{ base: '12', sm: '12', md: '64' }}
+            fontFamily={'Reggae One'}
+          >
+            daily ui
+          </Text>
+          <Text fontWeight="bold" fontFamily={'Reggae One'}>
+            せんりのみちもいっぽから
+          </Text>
+        </VStack>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
       </HStack>
       <Stack marginTop={6}>

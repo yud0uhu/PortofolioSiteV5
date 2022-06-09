@@ -14,6 +14,7 @@ import {
   HStack,
   Grid,
   GridItem,
+  VStack,
 } from '@chakra-ui/react';
 import Card from '@/components/atoms/Card/index';
 import React from 'react';
@@ -37,14 +38,19 @@ const Products = () => {
     <>
       <HStack direction={'row'}>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
-        <Text
-          fontWeight="bold"
-          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
-          px={{ base: '12', sm: '12', md: '64' }}
-          fontFamily={'Reggae One'}
-        >
-          products
-        </Text>
+        <VStack direction={'row'}>
+          <Text
+            fontWeight="bold"
+            fontSize={{ base: '40px', sm: '40px', md: '40px' }}
+            px={{ base: '12', sm: '12', md: '64' }}
+            fontFamily={'Reggae One'}
+          >
+            products
+          </Text>
+          <Text fontWeight="bold" fontFamily={'Reggae One'}>
+            つくったもの
+          </Text>
+        </VStack>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
       </HStack>
       <SimpleGrid columns={[1, null, 4]} spacing="40px">

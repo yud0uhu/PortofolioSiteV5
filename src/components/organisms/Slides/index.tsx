@@ -7,6 +7,7 @@ import {
   ListItem,
   UnorderedList,
   HStack,
+  VStack,
 } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
@@ -22,14 +23,19 @@ const Slides = () => {
     <>
       <HStack direction={'row'}>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
-        <Text
-          fontWeight="bold"
-          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
-          px={{ base: '12', sm: '12', md: '64' }}
-          fontFamily={'Reggae One'}
-        >
-          slides
-        </Text>
+        <VStack direction={'row'}>
+          <Text
+            fontWeight="bold"
+            fontSize={{ base: '40px', sm: '40px', md: '40px' }}
+            px={{ base: '12', sm: '12', md: '64' }}
+            fontFamily={'Reggae One'}
+          >
+            slides
+          </Text>
+          <Text fontWeight="bold" fontFamily={'Reggae One'}>
+            かこにしゃべったこと
+          </Text>
+        </VStack>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
       </HStack>
       <Stack direction={'row'} marginTop={12} marginBottom={12}>

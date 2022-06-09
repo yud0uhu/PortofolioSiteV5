@@ -7,6 +7,7 @@ import {
   ListItem,
   UnorderedList,
   HStack,
+  VStack,
 } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
@@ -14,18 +15,19 @@ import React from 'react';
 const Job = () => {
   return (
     <>
-      <HStack direction={'row'}>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+      <VStack direction={'row'}>
         <Text
           fontWeight="bold"
-          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
+          fontSize={{ base: '40px', sm: '40px', md: '40px' }}
           px={{ base: '12', sm: '12', md: '64' }}
           fontFamily={'Reggae One'}
         >
           intern & hackathon
         </Text>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
-      </HStack>
+        <Text fontWeight="bold" fontFamily={'Reggae One'}>
+          これまでのぼうけん
+        </Text>
+      </VStack>
       <Stack direction={'row'} marginTop={12} marginBottom={12}>
         <UnorderedList
           textAlign={'left'}
