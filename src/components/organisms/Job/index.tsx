@@ -15,19 +15,23 @@ import React from 'react';
 const Job = () => {
   return (
     <>
-      <VStack direction={'row'}>
-        <Text
-          fontWeight="bold"
-          fontSize={{ base: '40px', sm: '40px', md: '40px' }}
-          px={{ base: '12', sm: '12', md: '64' }}
-          fontFamily={'Reggae One'}
-        >
-          intern & hackathon
-        </Text>
-        <Text fontWeight="bold" fontFamily={'Reggae One'}>
-          これまでのぼうけん
-        </Text>
-      </VStack>
+      <HStack direction={'row'}>
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
+        <VStack direction={'row'}>
+          <Text
+            fontWeight="bold"
+            fontSize={{ base: '40px', sm: '40px', md: '40px' }}
+            px={{ base: '12', sm: '12', md: '64' }}
+            fontFamily={'Reggae One'}
+          >
+            intern & hackathon
+          </Text>
+          <Text fontWeight="bold" fontFamily={'Reggae One'}>
+            これまでのぼうけん
+          </Text>
+        </VStack>
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
+      </HStack>
       <Stack direction={'row'} marginTop={12} marginBottom={12}>
         <UnorderedList
           textAlign={'left'}
