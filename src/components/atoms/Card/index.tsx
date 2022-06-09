@@ -11,6 +11,8 @@ import {
   Img,
   Spacer,
   Badge,
+  LinkBox,
+  LinkOverlay,
 } from '@chakra-ui/react';
 import React from 'react';
 type allmicrocmsWorksProps = {
@@ -34,58 +36,34 @@ export default function Card(props: allmicrocmsWorksProps) {
   } = props;
   return (
     <Center py={2}>
-      <Box
+      <LinkBox
+        h="300px"
+        width="300px"
+        as="article"
         maxW="sm"
+        p="5"
         borderWidth="1px"
-        h="400px"
-        bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'md'}
-        rounded={'md'}
-        p={6}
-        overflow={'hidden'}
+        rounded="md"
       >
-        <Box bg={'gray.100'} mt={-6} mx={-6} mb={6} p={2} pos={'relative'}>
+        <Box>
           <Img
             overflow={'hidden'}
             src={productImage.url}
             maxH={'150px'}
+            width={'300px'}
             alt={productImage}
           />
         </Box>
-        <Stack>
-          <Box display="flex" alignItems="baseline">
-            <Badge noOfLines={1} borderRadius="full" px="2" colorScheme="teal">
-              {productComposition}
-            </Badge>
-          </Box>
-          <Heading
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'md'}
-            fontFamily={'body'}
-          >
-            {productTitle}
-          </Heading>
-        </Stack>
-        <Text color={'gray.500'}>{productData}</Text>
-        <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-          <a href={githubUrl}>
-            <Text fontSize={'sm'}>GitHub</Text>
-          </a>
-          <Text lineHeight="tight">
-            <Box
-              mt="1"
-              fontWeight="semibold"
-              as="h4"
-              lineHeight="tight"
-              noOfLines={1}
-            >
-              {productDatail}
-            </Box>
-          </Text>
-          {/* TODO: Moreでモーダル出す */}
-          <Button text={'View More ＞'} />
-        </Stack>
-      </Box>
+        <Box as="time" dateTime="${productData}">
+          {productData}
+        </Box>
+        <Heading size="md" my="2">
+          <LinkOverlay href={githubUrl}>GitHub</LinkOverlay>
+        </Heading>
+        <Text as="h4" lineHeight="tight" noOfLines={1}>
+          {productDatail}
+        </Text>
+      </LinkBox>
     </Center>
   );
 }

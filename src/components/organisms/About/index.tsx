@@ -1,51 +1,49 @@
-import { Divider, Box, Flex, Text, Stack } from '@chakra-ui/react';
+import {
+  Divider,
+  Box,
+  Flex,
+  Text,
+  Stack,
+  HStack,
+  Heading,
+} from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
 const About = () => {
   return (
     <>
-      <Stack direction={'row'}>
-        <Divider
-          marginTop={6}
-          w={{ base: 90, sm: 90, md: 180 }}
-          borderWidth={5}
-          borderColor={'#B3D4FC'}
-        />
+      <HStack direction={'row'}>
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
         <Text
           fontWeight="bold"
-          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
-          justifyContent="left"
-          position={'absolute'}
-          px={{ base: '36', sm: '36', md: '52' }}
+          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
+          px={{ base: '12', sm: '12', md: '64' }}
+          fontFamily={'Reggae One'}
         >
           about me
         </Text>
-      </Stack>
-      <Stack direction={'row'} marginTop={6}>
-        <Box px={2}>
-          <Text
-            fontWeight="bold"
-            fontSize={{ base: 'xl', sm: 'md', md: '2xl' }}
-            textAlign="left"
-          >
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+      </HStack>
+      <HStack direction={'column'} marginTop={2} marginBottom={12}>
+        <Box paddingStart={{ base: '12', sm: '12', md: '96' }}>
+          <Heading size="lg" fontFamily={'Reggae One'}>
             0Yu(zero yu)
-          </Text>
-          <Text fontSize={{ base: 'md', sm: 'md', md: 'xl' }} textAlign="left">
+          </Heading>
+          <Text
+            fontSize={{ base: 'sm', sm: 'sm', md: 'xl' }}
+            fontFamily={'Reggae One'}
+          >
             試される大地のサブカルオタク
             <br />
             Webやゲームエンジンでものづくりをするのが好きです
             <br />
+            <Box display="flex" flexDirection="row">
+              <IconLink />
+            </Box>
           </Text>
         </Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          maxWidth={{ base: 'md', sm: 'sm' }}
-        >
-          <IconLink />
-        </Box>
-      </Stack>
+      </HStack>
     </>
   );
 };

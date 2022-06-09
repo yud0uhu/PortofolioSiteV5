@@ -14,6 +14,7 @@ export default function HomePage() {
       textAlign={'center'}
       spacing={{ base: 8, md: 14 }}
       py={{ base: 20, md: 36 }}
+      fontFamily={'Reggae One'}
     >
       <Flex w={'full'} direction={'column'}>
         <About />

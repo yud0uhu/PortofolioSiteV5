@@ -1,10 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-export const useallMicrocmsWokrsMetadata = () => {
-  const alldata = useStaticQuery(graphql`
+export const uselimitMicrocmsWokrsMetadata = () => {
+  const limitdata = useStaticQuery(graphql`
     {
-      allMicrocmsWorks(skip: 4) {
+      allMicrocmsWorks(limit: 4) {
         nodes {
           githubUrl
           productDatail
@@ -22,5 +22,5 @@ export const useallMicrocmsWokrsMetadata = () => {
       }
     }
   `);
-  return alldata.allMicrocmsWorks;
+  return limitdata.allMicrocmsWorks;
 };

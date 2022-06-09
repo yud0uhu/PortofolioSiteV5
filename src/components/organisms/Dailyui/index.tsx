@@ -1,19 +1,23 @@
+import React from 'react';
 import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Stack,
+  Heading,
+  Text,
+  Container,
   Divider,
   Spacer,
-  Text,
-  Box,
-  Stack,
-  useBreakpointValue,
-  IconButton,
+  HStack,
 } from '@chakra-ui/react';
 import UiCard from '@/components/atoms/UiCard/index';
-import React from 'react';
-import Slider from 'react-slick';
 
 import Button from '@/components/atoms/Button/index';
 import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/allMicrocmsDailiui';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
+import Slider from 'react-slick';
+
 type allmicrocmsDailyuiProps = {
   figma: string;
   title: string;
@@ -31,35 +35,33 @@ const settings = {
   slidesToScroll: 1,
 };
 const Products = () => {
-  const [slider, setSlider] = React.useState<Slider | null>(null);
   const data = useAllMicrocmsDailiuiMetadata();
+
+  const [slider, setSlider] = React.useState<Slider | null>(null);
+
   const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '10px' });
+  const side = useBreakpointValue({ base: '30%', md: '40px' });
+
   console.log(data);
   return (
     <>
-      <Stack direction={'row'}>
-        <Divider
-          marginTop={6}
-          w={{ base: 45, sm: 45, md: 180 }}
-          borderWidth={5}
-          borderColor={'#B3D4FC'}
-        />
+      <HStack direction={'row'}>
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
         <Text
           fontWeight="bold"
-          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
-          justifyContent="left"
-          position={'absolute'}
-          px={{ base: '36', sm: '36', md: '52' }}
+          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
+          px={{ base: '12', sm: '12', md: '64' }}
+          fontFamily={'Reggae One'}
         >
           daily ui
         </Text>
-      </Stack>
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+      </HStack>
       <Stack marginTop={6}>
         <Box
           position={'relative'}
-          height={{ base: '400px', md: '600px', sm: '400px' }}
-          width={{ base: 'full', md: 'full', sm: 'full' }}
+          height={'600px'}
+          width={'full'}
           overflow={'hidden'}
         >
           {/* CSS files for react-slick */}
@@ -75,24 +77,25 @@ const Products = () => {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
           <IconButton
-            colorScheme="orange"
             aria-label="left-arrow"
-            borderRadius="full"
+            variant="ghost"
             position="absolute"
             left={side}
             top={top}
+            transform={'translate(0%, -50%)'}
             zIndex={2}
             onClick={() => slider?.slickPrev()}
           >
             <ArrowLeftIcon />
           </IconButton>
+          {/* Right Icon */}
           <IconButton
-            colorScheme="orange"
             aria-label="right-arrow"
-            borderRadius="full"
+            variant="ghost"
             position="absolute"
             right={side}
             top={top}
+            transform={'translate(0%, -50%)'}
             zIndex={2}
             onClick={() => slider?.slickNext()}
           >
@@ -101,7 +104,7 @@ const Products = () => {
           {/* Slider */}
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {data.nodes.map((node: allmicrocmsDailyuiProps, index: number) => (
-              <UiCard image={node.image} key={index} />
+              <UiCard image={node.image} key={index} title={node.title} />
             ))}
           </Slider>
         </Box>

@@ -8,11 +8,11 @@ const button = (props: Props) => {
   const { text } = props;
   return (
     <Button
+      fontFamily={'Reggae One'}
       variant="outline"
       as="button"
       borderColor={'#B3D4FC'}
       border="2px"
-      rounded={'full'}
       _hover={{
         bg: '#B3D4FC',
       }}

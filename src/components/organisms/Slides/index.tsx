@@ -6,6 +6,7 @@ import {
   Stack,
   ListItem,
   UnorderedList,
+  HStack,
 } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
@@ -19,24 +20,19 @@ const Slides = () => {
   const data = useAllMicrocmsSlideMetadata();
   return (
     <>
-      <Stack direction={'row'}>
-        <Divider
-          marginTop={6}
-          w={{ base: 45, sm: 45, md: 180 }}
-          borderWidth={5}
-          borderColor={'#B3D4FC'}
-        />
+      <HStack direction={'row'}>
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
         <Text
           fontWeight="bold"
-          fontSize={{ base: 'xl', sm: 'xl', md: '3xl' }}
-          justifyContent="left"
-          position={'absolute'}
-          px={{ base: '36', sm: '36', md: '52' }}
+          fontSize={{ base: '40px', sm: '0px', md: '40px' }}
+          px={{ base: '12', sm: '12', md: '64' }}
+          fontFamily={'Reggae One'}
         >
-          slide
+          slides
         </Text>
-      </Stack>
-      <Stack direction={'row'} marginTop={6}>
+        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+      </HStack>
+      <Stack direction={'row'} marginTop={12} marginBottom={12}>
         <UnorderedList textAlign={'left'}>
           {data.nodes.map((node: allmicrocmsSlideProps, index: number) => (
             <Stack p={2} key={index} _hover={{ bg: 'gray.100' }}>
