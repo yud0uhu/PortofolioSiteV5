@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 export const useallMicrocmsWokrsMetadata = () => {
   const alldata = useStaticQuery(graphql`
     {
-      allMicrocmsWorks(skip: 4) {
+      allMicrocmsWorks {
         nodes {
           githubUrl
           productDatail

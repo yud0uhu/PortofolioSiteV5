@@ -1,5 +1,6 @@
 // import Image from 'next/image';
 import Button from '@/components/atoms/Button/index';
+import ProductsDetail from '@/components/atoms/Modal/index';
 import {
   Box,
   Flex,

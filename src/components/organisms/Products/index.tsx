@@ -2,25 +2,21 @@ import {
   SimpleGrid,
   Divider,
   Spacer,
-  Flex,
   Text,
-  Stack,
-  AccordionButton,
-  AccordionItem,
-  Box,
-  AccordionPanel,
-  AccordionIcon,
-  Accordion,
   HStack,
-  Grid,
-  GridItem,
   VStack,
+  Stack,
+  Box,
+  IconButton,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import Card from '@/components/atoms/Card/index';
+import CardCarousel from '@/components/atoms/CardCarousel/index';
 import React from 'react';
-
+import Slider from 'react-slick';
 import Button from '@/components/atoms/Button/index';
-import { uselimitMicrocmsWokrsMetadata } from '@/hooks/query/limitMicrocmsWorks';
+import { useallMicrocmsWokrsMetadata } from '@/hooks/query/allMicrocmsWorks';
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 
 type microcmsWorksProps = {
   githubUrl: string;
@@ -31,8 +27,24 @@ type microcmsWorksProps = {
   productComposition: string;
   productData: Date;
 };
+const settings = {
+  dots: true,
+  arrows: false,
+  fade: true,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 const Products = () => {
-  const data = uselimitMicrocmsWokrsMetadata();
+  const data = useallMicrocmsWokrsMetadata();
+  const [slider, setSlider] = React.useState<Slider | null>(null);
+
+  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const side = useBreakpointValue({ base: '30%', md: '40px' });
+
   console.log(data);
   return (
     <>
@@ -53,22 +65,69 @@ const Products = () => {
         </VStack>
         <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
-      <SimpleGrid columns={[1, null, 4]} spacing="40px">
-        {data.nodes.map((node: microcmsWorksProps, i: number) => (
-          <Card
-            githubUrl={node.githubUrl}
-            productDatail={node.productDatail}
-            productImage={node.productImage}
-            productTitle={node.productTitle}
-            productUrl={node.productUrl}
-            productComposition={node.productComposition}
-            productData={node.productData}
-            key={i}
+      <Stack marginTop={6}>
+        <Box
+          position={'relative'}
+          height={'600px'}
+          width={'full'}
+          overflow={'hidden'}
+        >
+          {/* CSS files for react-slick */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charSet="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
           />
-        ))}
-      </SimpleGrid>
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+          <IconButton
+            aria-label="left-arrow"
+            variant="ghost"
+            position="absolute"
+            left={side}
+            top={top}
+            transform={'translate(0%, -50%)'}
+            zIndex={2}
+            onClick={() => slider?.slickPrev()}
+          >
+            <ArrowLeftIcon />
+          </IconButton>
+          {/* Right Icon */}
+          <IconButton
+            aria-label="right-arrow"
+            variant="ghost"
+            position="absolute"
+            right={side}
+            top={top}
+            transform={'translate(0%, -50%)'}
+            zIndex={2}
+            onClick={() => slider?.slickNext()}
+          >
+            <ArrowRightIcon />
+          </IconButton>
+          {/* Slider */}
+          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+            {data.nodes.map((node: microcmsWorksProps, i: number) => (
+              <CardCarousel
+                githubUrl={node.githubUrl}
+                productDatail={node.productDatail}
+                productImage={node.productImage}
+                productTitle={node.productTitle}
+                productUrl={node.productUrl}
+                productComposition={node.productComposition}
+                productData={node.productData}
+                key={i}
+              />
+            ))}
+          </Slider>
+        </Box>
+        <Spacer />
+      </Stack>
       <Spacer />
-      <Button text={'View More ＞'} />
     </>
   );
 };
