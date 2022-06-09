@@ -23,7 +23,7 @@ const About = () => {
             px={{ base: '12', sm: '12', md: '64' }}
             fontFamily={'Reggae One'}
           >
-            about me
+            aboutme
           </Text>
           <Text fontWeight="bold" fontFamily={'Reggae One'}>
             なかのひと

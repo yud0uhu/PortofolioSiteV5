@@ -55,7 +55,7 @@ const Products = () => {
             px={{ base: '12', sm: '12', md: '64' }}
             fontFamily={'Reggae One'}
           >
-            daily ui
+            dailyui
           </Text>
           <Text fontWeight="bold" fontFamily={'Reggae One'}>
             せんりのみちもいっぽから
