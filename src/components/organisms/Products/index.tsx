@@ -71,6 +71,7 @@ const Products = () => {
           height={'600px'}
           width={'full'}
           overflow={'hidden'}
+          // _hover={{ opacity: 0.6 }}
         >
           {/* CSS files for react-slick */}
           <link
