@@ -47,7 +47,7 @@ const Products = () => {
         </Text>
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
       </HStack>
-      <SimpleGrid columns={[2, null, 4]} spacing="40px">
+      <SimpleGrid columns={[1, null, 4]} spacing="40px">
         {data.nodes.map((node: microcmsWorksProps, i: number) => (
           <Card
             githubUrl={node.githubUrl}
