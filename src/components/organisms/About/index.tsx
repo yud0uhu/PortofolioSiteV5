@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <HStack direction={'row'}>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
         <VStack direction={'row'}>
           <Text
             fontWeight="bold"
@@ -29,7 +29,7 @@ const About = () => {
             なかのひと
           </Text>
         </VStack>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
       <HStack direction={'column'} marginTop={2} marginBottom={12}>
         s

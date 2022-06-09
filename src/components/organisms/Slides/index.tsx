@@ -22,7 +22,7 @@ const Slides = () => {
   return (
     <>
       <HStack direction={'row'}>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
         <VStack direction={'row'}>
           <Text
             fontWeight="bold"
@@ -36,7 +36,7 @@ const Slides = () => {
             かこにしゃべったこと
           </Text>
         </VStack>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
       <Stack direction={'row'} marginTop={12} marginBottom={12}>
         <UnorderedList textAlign={'left'}>

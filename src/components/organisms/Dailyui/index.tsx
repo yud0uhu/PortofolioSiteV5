@@ -47,7 +47,7 @@ const Products = () => {
   return (
     <>
       <HStack direction={'row'}>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
         <VStack direction={'row'}>
           <Text
             fontWeight="bold"
@@ -61,7 +61,7 @@ const Products = () => {
             せんりのみちもいっぽから
           </Text>
         </VStack>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
       <Stack marginTop={6}>
         <Box

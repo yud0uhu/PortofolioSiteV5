@@ -37,7 +37,7 @@ const Products = () => {
   return (
     <>
       <HStack direction={'row'}>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
         <VStack direction={'row'}>
           <Text
             fontWeight="bold"
@@ -51,7 +51,7 @@ const Products = () => {
             つくったもの
           </Text>
         </VStack>
-        <Divider borderWidth={5} borderColor={'#B3D4FC'} />
+        <Divider borderWidth={2} borderColor={'#B3D4FC'} />
       </HStack>
       <SimpleGrid columns={[1, null, 4]} spacing="40px">
         {data.nodes.map((node: microcmsWorksProps, i: number) => (
