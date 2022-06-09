@@ -33,7 +33,7 @@ type microcmsWorksProps = {
 };
 const Products = () => {
   const data = uselimitMicrocmsWokrsMetadata();
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <HStack direction={'row'}>

@@ -18,6 +18,6 @@ export const useAllMicrocmsDailiuiMetadata = () => {
       }
     }
   `);
-  console.log(data);
+  // console.log(data);
   return data.allMicrocmsDailyui;
 };

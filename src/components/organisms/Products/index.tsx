@@ -45,7 +45,7 @@ const Products = () => {
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <HStack direction={'row'}>
