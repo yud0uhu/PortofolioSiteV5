@@ -47,13 +47,15 @@ export default function Card(props: allmicrocmsWorksProps) {
         rounded="md"
       >
         <Box>
-          <Img
-            overflow={'hidden'}
-            src={productImage.url}
-            maxH={'150px'}
-            width={'300px'}
-            alt={productImage}
-          />
+          <picture>
+            <Img
+              overflow={'hidden'}
+              src={productImage.url}
+              maxH={'150px'}
+              width={'300px'}
+              alt={productImage}
+            />
+          </picture>
         </Box>
         <Box as="time" dateTime="${productData}">
           {productData}

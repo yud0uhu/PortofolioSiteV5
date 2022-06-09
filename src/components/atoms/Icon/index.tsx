@@ -13,7 +13,9 @@ export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
       marginTop={2}
       width={{ base: '48px', md: '96px', sm: '48px' }}
     >
-      <img src={iconImageUrl} alt={iconImageUrl} />
+      <picture>
+        <img src={iconImageUrl} alt={iconImageUrl} />
+      </picture>
     </Box>
   );
 };
