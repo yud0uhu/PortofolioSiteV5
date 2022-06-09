@@ -32,7 +32,8 @@ const About = () => {
         <Divider borderWidth={5} borderColor={'#B3D4FC'} />
       </HStack>
       <HStack direction={'column'} marginTop={2} marginBottom={12}>
-        <Box paddingStart={{ base: '12', sm: '12', md: '96' }}>
+        s
+        <VStack direction={'row'} px={{ base: '12', sm: '12', md: '80' }}>
           <Heading size="lg" fontFamily={'Reggae One'}>
             0Yu(zero yu)
           </Heading>
@@ -48,7 +49,7 @@ const About = () => {
               <IconLink />
             </Box>
           </Text>
-        </Box>
+        </VStack>
       </HStack>
     </>
   );
