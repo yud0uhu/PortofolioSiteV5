@@ -21,7 +21,7 @@ export default function Home() {
         <picture>
           <Img
             width={{ base: 'sm', md: '1500px', sm: 'sm' }}
-            height={{ base: 'full', md: 'full', sm: 'full' }}
+            height={{ base: 'full', md: '200px', sm: 'full' }}
             objectFit="cover"
             src={LogoIcon}
             alt="logo"
