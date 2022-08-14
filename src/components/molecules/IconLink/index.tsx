@@ -9,7 +9,7 @@ import { FaTwitterSquare } from '@react-icons/all-files/fa/FaTwitterSquare';
 export default function IconLink() {
   return (
     <>
-      <a href={'https://github.com/'} target="_blank" rel="noreferrer">
+      <a href={'https://github.com/yud0uhu'} target="_blank" rel="noreferrer">
         <FaGithubSquare size="lg" color={'#40322A'} />
       </a>
       <Box px={2} />
