@@ -1,17 +1,9 @@
-// import Image from 'next/image';
-import Button from '@/components/atoms/Button/index';
-import ProductsDetail from '@/components/atoms/Modal/index';
 import {
   Box,
-  Flex,
   Center,
   Heading,
   Text,
-  Stack,
-  useColorModeValue,
   Img,
-  Spacer,
-  Badge,
   LinkBox,
   LinkOverlay,
 } from '@chakra-ui/react';
@@ -19,15 +11,13 @@ import React from 'react';
 type allmicrocmsWorksProps = {
   githubUrl: string;
   productDatail: string;
-  productImage: string;
+  productImage: { url: string };
   productTitle: string;
   productUrl: string;
   productComposition: string;
   productData: Date;
 };
-const Card: React.FC<allmicrocmsWorksProps> = (
-  props: allmicrocmsWorksProps,
-) => {
+export default function Card(props: allmicrocmsWorksProps) {
   const { githubUrl, productDatail, productImage, productData } = props;
   return (
     <Center py={2}>
@@ -47,7 +37,7 @@ const Card: React.FC<allmicrocmsWorksProps> = (
               src={productImage.url}
               maxH={'150px'}
               width={'300px'}
-              alt={productImage}
+              alt={productDatail}
             />
           </picture>
         </Box>
@@ -63,4 +53,4 @@ const Card: React.FC<allmicrocmsWorksProps> = (
       </LinkBox>
     </Center>
   );
-};
+}

@@ -5,17 +5,22 @@ import React from 'react';
 type allmicrocmsWorksProps = {
   githubUrl: string;
   productDatail: string;
-  productImage: { url: string };
+  productImage: string;
   productTitle: string;
   productUrl: string;
   productComposition: string;
   productData: Date;
 };
-const CardCarousel: React.FC<allmicrocmsWorksProps> = (
-  props: allmicrocmsWorksProps,
-) => {
-  const { productDatail, productImage, productTitle, productComposition } =
-    props;
+export default function CardCarousel(props: allmicrocmsWorksProps) {
+  const {
+    githubUrl,
+    productDatail,
+    productImage,
+    productTitle,
+    productUrl,
+    productComposition,
+    productData,
+  } = props;
   return (
     <>
       <Heading
@@ -48,5 +53,4 @@ const CardCarousel: React.FC<allmicrocmsWorksProps> = (
       </Box>
     </>
   );
-};
-export default CardCarousel;
+}
