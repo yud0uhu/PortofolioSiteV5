@@ -9,11 +9,9 @@ import {
   IconButton,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import Card from '@/components/atoms/Card/index';
 import CardCarousel from '@/components/atoms/CardCarousel/index';
 import React from 'react';
 import Slider from 'react-slick';
-import Button from '@/components/atoms/Button/index';
 import { useallMicrocmsWokrsMetadata } from '@/hooks/query/allMicrocmsWorks';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 

@@ -1,4 +1,4 @@
-import { Text, Stack, Flex, Box } from '@chakra-ui/react';
+import { Stack, Flex, Box } from '@chakra-ui/react';
 import About from '@/components/organisms/About/index';
 import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';

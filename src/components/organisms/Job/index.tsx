@@ -7,7 +7,6 @@ import {
   HStack,
   VStack,
 } from '@chakra-ui/react';
-import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
 const Job = () => {
