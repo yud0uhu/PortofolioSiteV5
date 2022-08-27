@@ -1,7 +1,7 @@
 import { Stack, Skeleton } from '@chakra-ui/react';
 import React from 'react';
 
-export default function HeroImage() {
+const HeroImage: React.FC = () => {
   return (
     <Stack
       textAlign={'center'}
@@ -23,4 +23,5 @@ export default function HeroImage() {
       );
     </Stack>
   );
-}
+};
+export default HeroImage;

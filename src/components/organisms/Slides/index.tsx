@@ -14,7 +14,7 @@ type allmicrocmsSlideProps = {
   slideTitle: string;
   slideUrl: string;
 };
-const Slides = () => {
+const Slides: React.FC = () => {
   const data = useAllMicrocmsSlideMetadata();
   return (
     <>

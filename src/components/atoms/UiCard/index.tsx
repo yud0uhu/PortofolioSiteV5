@@ -7,7 +7,9 @@ type allmicrocmsDailyuiProps = {
   title: string;
   image: string;
 };
-export default function uiCard(props: allmicrocmsDailyuiProps) {
+const uiCard: React.FC<allmicrocmsDailyuiProps> = (
+  props: allmicrocmsDailyuiProps,
+) => {
   const { figma, title, image } = props;
   return (
     <>
@@ -38,4 +40,5 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
       </Box>
     </>
   );
-}
+};
+export default uiCard;

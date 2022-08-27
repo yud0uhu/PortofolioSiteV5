@@ -25,16 +25,10 @@ type allmicrocmsWorksProps = {
   productComposition: string;
   productData: Date;
 };
-export default function Card(props: allmicrocmsWorksProps) {
-  const {
-    githubUrl,
-    productDatail,
-    productImage,
-    productTitle,
-    productUrl,
-    productComposition,
-    productData,
-  } = props;
+const Card: React.FC<allmicrocmsWorksProps> = (
+  props: allmicrocmsWorksProps,
+) => {
+  const { githubUrl, productDatail, productImage, productData } = props;
   return (
     <Center py={2}>
       <LinkBox
@@ -58,7 +52,7 @@ export default function Card(props: allmicrocmsWorksProps) {
           </picture>
         </Box>
         <Box as="time" dateTime="${productData}">
-          {productData}
+          <>{productData}</>
         </Box>
         <Heading size="md" my="2">
           <LinkOverlay href={githubUrl}>GitHub</LinkOverlay>
@@ -69,4 +63,4 @@ export default function Card(props: allmicrocmsWorksProps) {
       </LinkBox>
     </Center>
   );
-}
+};

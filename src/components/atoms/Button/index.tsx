@@ -4,7 +4,7 @@ import React from 'react';
 type Props = {
   text: string;
 };
-const button = (props: Props) => {
+const button: React.FC<Props> = (props) => {
   const { text } = props;
   return (
     <Button

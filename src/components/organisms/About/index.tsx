@@ -2,7 +2,7 @@ import { Divider, Box, Text, VStack, HStack, Heading } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <>
       <HStack direction={'row'}>

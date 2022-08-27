@@ -18,7 +18,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 type microcmsWorksProps = {
   githubUrl: string;
   productDatail: string;
-  productImage: string;
+  productImage: { url: string };
   productTitle: string;
   productUrl: string;
   productComposition: string;

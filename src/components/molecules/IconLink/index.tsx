@@ -4,7 +4,7 @@ import { SiHatenabookmark } from '@react-icons/all-files/si/SiHatenabookmark';
 import React from 'react';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
 import { FaTwitterSquare } from '@react-icons/all-files/fa/FaTwitterSquare';
-export default function IconLink() {
+const IconLink: React.FC = () => {
   return (
     <>
       <a href={'https://github.com/yud0uhu'} target="_blank" rel="noreferrer">
@@ -33,4 +33,5 @@ export default function IconLink() {
       </a>
     </>
   );
-}
+};
+export default IconLink;

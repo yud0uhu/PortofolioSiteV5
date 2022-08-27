@@ -21,7 +21,7 @@ type microcmsWorksProps = {
   productComposition: string;
   productData: Date;
 };
-const Products = () => {
+const Products: React.FC = () => {
   const data = uselimitMicrocmsWokrsMetadata();
   // console.log(data);
   return (

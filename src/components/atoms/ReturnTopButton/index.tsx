@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Button from '@/components/atoms/Button/index';
 import React from 'react';
 
-const ReturnTopButton = () => {
+const ReturnTopButton: React.FC<> = () => {
   const [isButtonActive, setIsButtonActive] = useState(false);
 
   const returnTop = () => {
