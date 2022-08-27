@@ -1,7 +1,5 @@
 import {
   Divider,
-  Box,
-  Flex,
   Text,
   Stack,
   ListItem,

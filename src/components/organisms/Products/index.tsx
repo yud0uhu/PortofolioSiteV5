@@ -1,5 +1,4 @@
 import {
-  SimpleGrid,
   Divider,
   Spacer,
   Text,

@@ -2,7 +2,6 @@ import HomePage from '@/components/pages/HomePage/index';
 import { ChakraProvider, Stack } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 import React from 'react';
-import { RecoilRoot } from 'recoil';
 import { Img } from '@chakra-ui/react';
 import LogoIcon from '@/static/ProfileBanner.webp';
 import '@fontsource/reggae-one/400.css';

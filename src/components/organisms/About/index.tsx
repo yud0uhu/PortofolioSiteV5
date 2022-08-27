@@ -1,13 +1,4 @@
-import {
-  Divider,
-  Box,
-  Flex,
-  Text,
-  Stack,
-  VStack,
-  HStack,
-  Heading,
-} from '@chakra-ui/react';
+import { Divider, Box, Text, VStack, HStack, Heading } from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 

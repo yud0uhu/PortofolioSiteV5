@@ -2,18 +2,8 @@ import {
   SimpleGrid,
   Divider,
   Spacer,
-  Flex,
   Text,
-  Stack,
-  AccordionButton,
-  AccordionItem,
-  Box,
-  AccordionPanel,
-  AccordionIcon,
-  Accordion,
   HStack,
-  Grid,
-  GridItem,
   VStack,
 } from '@chakra-ui/react';
 import Card from '@/components/atoms/Card/index';

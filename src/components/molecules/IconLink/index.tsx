@@ -1,7 +1,5 @@
-import { Box, Spacer, Text } from '@chakra-ui/react';
-import { Icon } from '@/components/atoms/Icon/index';
+import { Box } from '@chakra-ui/react';
 import { SiHatenabookmark } from '@react-icons/all-files/si/SiHatenabookmark';
-import { SiZendesk } from '@react-icons/all-files/si/SiZendesk';
 
 import React from 'react';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
@@ -13,11 +11,7 @@ export default function IconLink() {
         <FaGithubSquare size="lg" color={'#40322A'} />
       </a>
       <Box px={2} />
-      <a
-        href={'https://twitter.com/denham95173179'}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href={'https://twitter.com/yud0uhu'} target="_blank" rel="noreferrer">
         <FaTwitterSquare size="lg" color={'#40322A'} />
       </a>
       <Box px={2} />
