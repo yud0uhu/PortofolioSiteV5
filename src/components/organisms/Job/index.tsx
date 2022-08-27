@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-const Job = () => {
+const Job: React.FC = () => {
   return (
     <>
       <HStack direction={'row'}>

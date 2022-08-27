@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import UiCard from '@/components/atoms/UiCard/index';
 
-import Button from '@/components/atoms/Button/index';
 import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/allMicrocmsDailiui';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import Slider from 'react-slick';
@@ -21,6 +20,7 @@ type allmicrocmsDailyuiProps = {
   figma: string;
   title: string;
   image: string;
+  productImage: { url: string };
 };
 const settings = {
   dots: true,
@@ -33,7 +33,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
-const Products = () => {
+const Products: React.FC = () => {
   const data = useAllMicrocmsDailiuiMetadata();
 
   const [slider, setSlider] = React.useState<Slider | null>(null);
@@ -41,7 +41,6 @@ const Products = () => {
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
-  // console.log(data);
   return (
     <>
       <HStack direction={'row'}>
@@ -105,10 +104,14 @@ const Products = () => {
           >
             <ArrowRightIcon />
           </IconButton>
-          {/* Slider */}
-          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Slider {...settings} ref={(slider: Slider) => setSlider(slider)}>
             {data.nodes.map((node: allmicrocmsDailyuiProps, index: number) => (
-              <UiCard image={node.image} key={index} title={node.title} />
+              <UiCard
+                image={node.image}
+                key={index}
+                title={node.title}
+                figma={node.figma}
+              />
             ))}
           </Slider>
         </Box>
