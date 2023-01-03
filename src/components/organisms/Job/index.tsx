@@ -7,7 +7,6 @@ import {
   HStack,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
 
 const Job: React.FC = () => {
   return (

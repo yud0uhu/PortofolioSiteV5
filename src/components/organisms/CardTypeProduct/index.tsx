@@ -7,21 +7,12 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import Card from '@/components/atoms/Card/index';
-import React from 'react';
 
 import Button from '@/components/atoms/Button/index';
 import { uselimitMicrocmsWokrsMetadata } from '@/hooks/query/limitMicrocmsWorks';
+import { allmicrocmsWorksProps } from '@/components/type';
 
-type microcmsWorksProps = {
-  githubUrl: string;
-  productDatail: string;
-  productImage: string;
-  productTitle: string;
-  productUrl: string;
-  productComposition: string;
-  productData: Date;
-};
-const Products: React.FC = () => {
+const Products: React.FC<allmicrocmsWorksProps> = () => {
   const data = uselimitMicrocmsWokrsMetadata();
   // console.log(data);
   return (

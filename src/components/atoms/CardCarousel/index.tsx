@@ -1,26 +1,14 @@
 // import Image from 'next/image';
 import { Box, Container, Heading, Stack, Text } from '@chakra-ui/react';
-import React from 'react';
 
-type allmicrocmsWorksProps = {
-  githubUrl: string;
-  productDatail: string;
-  productImage: string;
-  productTitle: string;
-  productUrl: string;
-  productComposition: string;
-  productData: Date;
-};
-export default function CardCarousel(props: allmicrocmsWorksProps) {
-  const {
-    githubUrl,
-    productDatail,
-    productImage,
-    productTitle,
-    productUrl,
-    productComposition,
-    productData,
-  } = props;
+import { allmicrocmsWorksProps } from '@/components/type';
+
+const CardCarousel: React.FC<allmicrocmsWorksProps> = ({
+  productDatail,
+  productImage,
+  productTitle,
+  productComposition,
+}: allmicrocmsWorksProps) => {
   return (
     <>
       <Heading
@@ -53,4 +41,5 @@ export default function CardCarousel(props: allmicrocmsWorksProps) {
       </Box>
     </>
   );
-}
+};
+export default CardCarousel;

@@ -1,10 +1,7 @@
+import { ButtonProps } from '@/components/type';
 import { Text, Button } from '@chakra-ui/react';
-import React from 'react';
 
-type Props = {
-  text: string;
-};
-const button: React.FC<Props> = (props) => {
+const button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const { text } = props;
   return (
     <Button

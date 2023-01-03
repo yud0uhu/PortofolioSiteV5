@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   IconButton,
@@ -15,13 +14,8 @@ import UiCard from '@/components/atoms/UiCard/index';
 import { useAllMicrocmsDailiuiMetadata } from '@/hooks/query/allMicrocmsDailiui';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import Slider from 'react-slick';
+import { allmicrocmsDailyuiProps } from '@/components/type';
 
-type allmicrocmsDailyuiProps = {
-  figma: string;
-  title: string;
-  image: string;
-  productImage: { url: string };
-};
 const settings = {
   dots: true,
   arrows: false,
@@ -33,7 +27,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
-const Products: React.FC = () => {
+const Products: React.FC<allmicrocmsDailyuiProps> = () => {
   const data = useAllMicrocmsDailiuiMetadata();
 
   const [slider, setSlider] = React.useState<Slider | null>(null);

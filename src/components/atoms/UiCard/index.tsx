@@ -1,21 +1,18 @@
 // import Image from 'next/image';
-import { Box, Container, Heading, Stack, Text } from '@chakra-ui/react';
-import React from 'react';
+import { allmicrocmsDailyuiProps } from '@/components/type';
+import { Box, Container, Heading, Stack } from '@chakra-ui/react';
+import { FC } from 'react';
 
-type allmicrocmsDailyuiProps = {
-  figma: string;
-  title: string;
-  image: string;
-};
-export default function uiCard(props: allmicrocmsDailyuiProps) {
-  const { figma, title, image } = props;
+const uiCard: FC<allmicrocmsDailyuiProps> = (
+  props: allmicrocmsDailyuiProps,
+) => {
   return (
     <>
       <Heading
         fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
         fontFamily={'Reggae One'}
       >
-        {title}
+        {props.title}
       </Heading>
       <Box
         height={'full'}
@@ -23,7 +20,7 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="contain"
-        backgroundImage={image.url}
+        backgroundImage={props.image.url}
       >
         <Container size="container.lg" height="600px" position="relative">
           <Stack
@@ -38,4 +35,5 @@ export default function uiCard(props: allmicrocmsDailyuiProps) {
       </Box>
     </>
   );
-}
+};
+export default uiCard;

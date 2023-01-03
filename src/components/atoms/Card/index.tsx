@@ -7,17 +7,12 @@ import {
   LinkBox,
   LinkOverlay,
 } from '@chakra-ui/react';
-import React from 'react';
-type allmicrocmsWorksProps = {
-  githubUrl: string;
-  productDatail: string;
-  productImage: { url: string };
-  productTitle: string;
-  productUrl: string;
-  productComposition: string;
-  productData: Date;
-};
-export default function Card(props: allmicrocmsWorksProps) {
+
+import { allmicrocmsWorksProps } from '@/components/type';
+
+const Card: React.FC<allmicrocmsWorksProps> = (
+  props: allmicrocmsWorksProps,
+) => {
   const { githubUrl, productDatail, productImage, productData } = props;
   return (
     <Center py={2}>
@@ -53,4 +48,5 @@ export default function Card(props: allmicrocmsWorksProps) {
       </LinkBox>
     </Center>
   );
-}
+};
+export default Card;

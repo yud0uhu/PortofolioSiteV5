@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Button from '@/components/atoms/Button/index';
-import React from 'react';
 
 const ReturnTopButton: React.FC = () => {
   const [isButtonActive, setIsButtonActive] = useState(false);
@@ -24,22 +23,19 @@ const ReturnTopButton: React.FC = () => {
     let scroll = 0;
     scroll = window.scrollY;
     if (top <= scroll) {
-      setIsButtonActive(true);
-    } else {
-      setIsButtonActive(false);
+      setIsButtonActive(!isButtonActive);
     }
   };
 
-  const normalStyle = {
-    opacity: 0,
-    transition: '0.5s',
-    pointerEvents: 'none',
-  };
-  const activeStyle = {
-    opacity: 1,
-    transition: '0.5s',
-  };
-  const style = isButtonActive ? activeStyle : normalStyle;
+  // const normalStyle = {
+  //   opacity: 0,
+  //   transition: '0.5s',
+  //   pointerEvents: 'none',
+  // };
+  // const activeStyle = {
+  //   opacity: 1,
+  //   transition: '0.5s',
+  // };
 
   return (
     <button onClick={returnTop}>

@@ -4,9 +4,9 @@ import Products from '@/components/organisms/Products/index';
 import Slides from '@/components/organisms/Slides/index';
 import DailyUi from '@/components/organisms/Dailyui/index';
 import Job from '@/components/organisms/Job/index';
-import React from 'react';
+import { FC } from 'react';
 import ReturntoButton from '@/components/atoms/ReturnTopButton/index';
-export default function HomePage() {
+export const HomePage: FC = () => {
   return (
     <Stack
       as={Box}
@@ -36,4 +36,4 @@ export default function HomePage() {
       <ReturntoButton />
     </Stack>
   );
-}
+};

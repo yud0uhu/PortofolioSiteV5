@@ -1,12 +1,7 @@
+import { IconProps } from '@/components/type';
 import { Box } from '@chakra-ui/react';
-import React from 'react';
 
-type IconProps = {
-  iconImageUrl: string;
-  marginLeft: number;
-};
-
-export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
+const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }: IconProps) => {
   return (
     <Box
       marginLeft={marginLeft}
@@ -19,3 +14,4 @@ export const Icon: React.FC<IconProps> = ({ iconImageUrl, marginLeft }) => {
     </Box>
   );
 };
+export default Icon;

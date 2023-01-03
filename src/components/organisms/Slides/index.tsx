@@ -7,14 +7,11 @@ import {
   HStack,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
-import { useAllMicrocmsSlideMetadata } from '@/hooks/query/allMicrocmsSlide';
 
-type allmicrocmsSlideProps = {
-  slideTitle: string;
-  slideUrl: string;
-};
-const Slides: React.FC = () => {
+import { useAllMicrocmsSlideMetadata } from '@/hooks/query/allMicrocmsSlide';
+import { allmicrocmsSlideProps } from '@/components/type';
+
+const Slides: React.FC<allmicrocmsSlideProps> = () => {
   const data = useAllMicrocmsSlideMetadata();
   return (
     <>
