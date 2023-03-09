@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import { SiZenn } from '@react-icons/all-files/si/SiZenn';
-import { SiHatenabookmark } from '@react-icons/all-files/si/SiHatenabookmark';
+import { SiZenn, SiHatenabookmark } from '@react-icons/si';
 
 import React from 'react';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
@@ -24,13 +23,9 @@ const IconLink: React.FC = () => {
         <Box px={2} />
         <SiHatenabookmark size="lg" color={'#40322A'} />
       </a>
-      <a
-        href={'https://zenn.dev/denham/'}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Box m={2}/>
-         <SiZenn size="lg" color={'#40322A'} />
+      <a href={'https://zenn.dev/denham/'} target="_blank" rel="noreferrer">
+        <Box m={2} />
+        <SiZenn size="lg" color={'#40322A'} />
       </a>
     </>
   );
