@@ -24,12 +24,12 @@ const IconLink: React.FC = () => {
         <SiHatenabookmark size="lg" color={'#40322A'} />
       </a>
       <a
-        href={'https://zenn.dev/denham/scraps'}
+        href={'https://zenn.dev/denham/'}
         target="_blank"
         rel="noreferrer"
       >
-        {/* <Box m={2}/>
-         <SiZendesk size="lg" color={'#40322A'} /> */}
+        <Box m={2}/>
+         <SiZenn size="lg" color={'#40322A'} />
       </a>
     </>
   );
