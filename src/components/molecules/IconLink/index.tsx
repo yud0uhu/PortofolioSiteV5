@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import { SiZenn } from '@react-icons/all-files/si/SiZenn';
 import { SiHatenabookmark } from '@react-icons/all-files/si/SiHatenabookmark';
 
 import React from 'react';
