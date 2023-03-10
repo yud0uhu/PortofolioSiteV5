@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
-import { SiZenn, SiHatenabookmark } from '@react-icons/si';
-
+import { SiHatenabookmark } from '@react-icons/all-files/si/SiHatenabookmark';
+import { ZennSvgIcon } from '../../atoms/ZennSvgIcon';
 import React from 'react';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
 import { FaTwitterSquare } from '@react-icons/all-files/fa/FaTwitterSquare';
@@ -25,7 +25,7 @@ const IconLink: React.FC = () => {
       </a>
       <a href={'https://zenn.dev/denham/'} target="_blank" rel="noreferrer">
         <Box m={2} />
-        <SiZenn size="lg" color={'#40322A'} />
+        <ZennSvgIcon size="lg" color={'#40322A'} />
       </a>
     </>
   );
