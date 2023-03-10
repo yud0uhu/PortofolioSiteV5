@@ -24,8 +24,9 @@ const IconLink: React.FC = () => {
         <SiHatenabookmark size="lg" color={'#40322A'} />
       </a>
       <a href={'https://zenn.dev/denham/'} target="_blank" rel="noreferrer">
-        <Box m={2} />
-        <ZennSvgIcon size="lg" color={'#40322A'} />
+        <Box m={2} width={'12px'}>
+          <ZennSvgIcon color={'#40322A'} />
+        </Box>
       </a>
     </>
   );
