@@ -8,23 +8,26 @@ const IconLink: React.FC = () => {
   return (
     <>
       <a href={'https://github.com/yud0uhu'} target="_blank" rel="noreferrer">
-        <FaGithubSquare size="lg" color={'#40322A'} />
+        <Box mr={2} width={{ base: '49px', md: '108px' }}>
+          <FaGithubSquare size="lg" color={'#40322A'} />
+        </Box>
       </a>
-      <Box px={2} />
-      <a href={'https://twitter.com/yud0uhu'} target="_blank" rel="noreferrer">
-        <FaTwitterSquare size="lg" color={'#40322A'} />
+      <a href={'https://github.com/yud0uhu'} target="_blank" rel="noreferrer">
+        <Box mr={2} width={{ base: '49px', md: '108px' }}>
+          <FaTwitterSquare size="lg" color={'#40322A'} />
+        </Box>
       </a>
-      <Box px={2} />
       <a
         href={'https://hackteck.hatenablog.com/'}
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
-        <Box px={2} />
-        <SiHatenabookmark size="lg" color={'#40322A'} />
+        <Box mr={2} mt={2} width={{ base: '49px', md: '108px' }}>
+          <SiHatenabookmark size="lg" color={'#40322A'} />
+        </Box>
       </a>
-      <a href={'https://zenn.dev/denham/'} target="_blank" rel="noreferrer">
-        <Box m={2} width={{ base: '157px', md: '118px' }} margin-left={'12px'}>
+      <a href={'https://zenn.dev/denham/'} rel="noreferrer" target="_blank">
+        <Box mr={2} mt={2} width={{ base: '49px', md: '108px' }}>
           <ZennSvgIcon color={'#40322A'} />
         </Box>
       </a>
