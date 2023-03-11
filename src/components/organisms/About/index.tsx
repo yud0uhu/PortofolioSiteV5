@@ -1,4 +1,12 @@
-import { Divider, Box, Text, VStack, HStack, Heading } from '@chakra-ui/react';
+import {
+  Divider,
+  Box,
+  Text,
+  VStack,
+  HStack,
+  Heading,
+  Center,
+} from '@chakra-ui/react';
 import IconLink from '@/components/molecules/IconLink';
 import React from 'react';
 
@@ -36,9 +44,9 @@ const About: React.FC = () => {
             <br />
             Webやゲームエンジンでものづくりをするのが好きです
             <br />
-            <Box display="flex" flexDirection="row">
+            <Center>
               <IconLink />
-            </Box>
+            </Center>
           </Text>
         </VStack>
       </HStack>
